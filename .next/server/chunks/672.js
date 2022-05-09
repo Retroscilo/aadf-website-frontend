@@ -26,7 +26,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  */
 
 function getStrapiURL(path = "") {
-  return `${"https://aadf-website.herokuapp.com" || 0}${path}`;
+  return `${"http://localhost:1337" || 0}${path}`;
 }
 /**
  * Helper to make GET requests to Strapi API endpoints
@@ -46,7 +46,8 @@ async function fetchAPI(path, urlParamsObject = {}, options = {}) {
 
 
   const queryString = qs__WEBPACK_IMPORTED_MODULE_0___default().stringify(urlParamsObject);
-  const requestUrl = `${getStrapiURL(`/api${path}${queryString ? `?${queryString}` : ""}`)}`; // Trigger API call
+  const requestUrl = `${getStrapiURL(`/api${path}${queryString ? `?${queryString}` : ""}`)}`;
+  console.log(requestUrl); // Trigger API call
 
   const response = await fetch(requestUrl, mergedOptions); // Handle response
 
