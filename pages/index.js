@@ -8,7 +8,7 @@ const Home = ({ articles, categories, homepage }) => {
   console.log(homepage)
   return (
     <Layout categories={categories}>
-      <Seo seo={homepage?.attributes?.seo} />
+      {/* <Seo seo={homepage?.attributes?.seo} /> */}
     </Layout>
   )
 }
