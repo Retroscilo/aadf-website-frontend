@@ -15,7 +15,7 @@ const Home = ({ homepage }) => {
   return (
     <Layout>
       <Seo seo={homepage?.attributes?.seo} />
-      {homepage.attributes.Content.map(mapToComponent)}
+      {homepage?.attributes?.Content?.map(mapToComponent)}
     </Layout>
   )
 }
