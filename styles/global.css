@@ -97,7 +97,7 @@ a:hover .arrow {
 }
 
 .buttonRounded {
-  @apply rounded-full border-[3px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out;
+  @apply rounded-full border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out;
 }
 
 .buttonSecondary2 {
@@ -112,21 +112,29 @@ a:hover .arrow {
   hover:text-primary-2;
 }
 
-.buttonOutline {
+.buttonOutlined {
   @apply bg-transparent
   text-primary-2
 }
 
 .buttonInverted {
-  @apply border-0 
+  @apply border-transparent
   bg-transparent 
   text-primary-2;
 }
 
-.buttonPrimary1.buttonOutline, .buttonPrimary1.buttonInverted{
+.buttonPrimary1.buttonOutlined, .buttonPrimary1.buttonInverted{
   @apply hover:bg-primary-1 hover:text-white;
 }
 
-.buttonSecondary2.buttonOutline, .buttonSecondary2.buttonInverted{
+.buttonPrimary1.buttonInverted{
+  @apply hover:border-[2px] hover:border-primary-1;
+}
+
+.buttonSecondary2.buttonOutlined, .buttonSecondary2.buttonInverted{
   @apply hover:bg-secondary-2 hover:text-white;
+}
+
+.buttonSecondary2.buttonInverted{
+  @apply hover:border-[2px] hover:border-secondary-2;
 }
