@@ -4,10 +4,10 @@ import Image from "next/image"
 
 const Hero = ({ title, subtitle, background }) => {
   const media = getMediaFromAttributes(background)
-  console.log(media)
+  console.log(getStrapiMedia(background))
   return (
     <div className="w-full" style={{ background: "crimson" }}>
-      <Image src={media.url} width={100} height={100} alt="" />
+      <Image src={getStrapiMedia(background)} width={100} height={100} alt="" />
     </div>
   )
 }
