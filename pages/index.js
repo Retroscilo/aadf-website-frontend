@@ -3,30 +3,30 @@ import Articles from "../components/articles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
+import getComponent from "../utils/getComponent"
 
-const Home = ({ articles, categories, homepage }) => {
+function mapToComponent(element) {
+  const Component = getComponent(element.__component)
+  return <Component key={element.id} {...element} />
+}
+
+const Home = ({ homepage }) => {
   console.log(homepage)
   return (
-    <Layout categories={categories}>
-      {/* <Seo seo={homepage?.attributes?.seo} /> */}
+    <Layout>
+      <Seo seo={homepage?.attributes?.seo} />
+      {homepage.attributes.Content.map(mapToComponent)}
     </Layout>
   )
 }
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
-    fetchAPI("/articles", { populate: "*" }),
-    fetchAPI("/categories", { populate: "*" }),
-    fetchAPI("/homepage", {
-      populate: "*",
-    }),
+  const [homepageRes] = await Promise.all([
+    fetchAPI("/homepage", { populate: "*" }),
   ])
-  console.log(homepageRes)
   return {
     props: {
-      articles: articlesRes.data,
-      categories: categoriesRes.data,
       homepage: homepageRes.data,
     },
     revalidate: 60,
