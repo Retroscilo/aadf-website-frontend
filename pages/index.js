@@ -23,7 +23,7 @@ const Home = ({ homepage }) => {
 export async function getStaticProps() {
   // Run API calls in parallel
   const [homepageRes] = await Promise.all([
-    fetchAPI("/homepage", { populate: "*" }),
+    fetchAPI("/homepage", { populate: "deep" }),
   ])
   return {
     props: {
