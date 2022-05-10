@@ -4,6 +4,7 @@ import "../assets/css/style.css"
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
 import { getStrapiMedia } from "../lib/media"
+import "@/styles/index.css"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
