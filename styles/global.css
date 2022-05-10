@@ -86,6 +86,12 @@ p {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
+a:hover,
+a:focus,
+a:active {
+  @apply text-primary-2 no-underline;
+}
+
 a:hover .arrow {
   @apply translate-x-[10px];
 }

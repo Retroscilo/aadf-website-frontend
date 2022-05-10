@@ -1,9 +1,10 @@
+import ArrowLink from "./arrowLink"
 import ButtonLink from "./buttonLink"
 import CustomImage from "./customImage"
 
 const StyledImage = (data) => {
   console.log({data})
- const { buttonLinks, customImages } = data
+ const { buttonLinks, customImages, arrowLink } = data
   return (
     <div className="flex flex-col gap-y-5 mt-10">
     <div className="flex gap-x-3">
@@ -24,6 +25,7 @@ const StyledImage = (data) => {
           <CustomImage image={image} color={color} />
         </div>)}
       </div>
+      {arrowLink && <ArrowLink url={arrowLink.url} text={arrowLink.text} newTab={arrowLink.newTab} />}
     </div>
   )
 }
