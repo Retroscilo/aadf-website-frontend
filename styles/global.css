@@ -86,7 +86,7 @@ strong {
   @apply font-KarlaMedium text-[14px] lg:text-[18px];
 }
 
-p {
+p,ul,ol {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
@@ -103,6 +103,7 @@ a:active {
 a:hover .arrow {
   @apply translate-x-[10px];
 }
+
 
 .buttonPrimary1 {
   @apply border-primary-1 
@@ -161,4 +162,22 @@ a:hover .arrow {
 
 .paddingCustomImage{
   width: calc(100% - 10px);
+}
+
+
+ol,
+ul {
+  @apply mt-[20px] pl-[20px] lg:pl-[30px];
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul li {
+  @apply my-[2.5rem];
 }

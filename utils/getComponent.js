@@ -6,6 +6,7 @@ import LogoWrapper from "../components/section/logoWrapper"
 import { v4 as uuidv4 } from "uuid"
 import Mission from "../components/section/mission"
 import Navbar from "../components/element/navbar/Navbar"
+import AdhesionSection from "../components/section/adhesionSection"
 
 const Components = {
   section: {
@@ -13,6 +14,7 @@ const Components = {
     events: Events,
     "logo-wrapper": LogoWrapper,
     mission: Mission,
+    "adhesion-section": AdhesionSection
   },
   element: {
     "styled-image": StyledImage,

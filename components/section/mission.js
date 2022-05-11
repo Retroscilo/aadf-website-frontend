@@ -9,9 +9,9 @@ const MissionWithDivider = ({mission}) => (
 
 const Mission = ({ title, missions }) => {
     return (
-        <div className="lg:container">
+        <div className="container">
             <h2 className="mb-[73px] text-center">{title}</h2>
-            <div className="flex flex-col bg-secondary-2 lg:justify-between lg:flex-row gap-y-10 flex-wrap">
+            <div className="flex flex-col lg:justify-between lg:flex-row gap-y-10 flex-wrap">
                 {
                     missions?.map((mission) => <MissionWithDivider key={mission.id} mission={mission} />)
                 }
