@@ -1,8 +1,9 @@
 import Nav from "./nav"
+import Navbar from "./Navbar"
 
 const Layout = ({ children }) => (
   <>
-    {/* <Nav categories={undefined} /> */}
+    <Navbar />
     {children}
   </>
 )

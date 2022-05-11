@@ -13,7 +13,7 @@ export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps
-
+  console.log(global)
   return (
     <>
       <Head>
@@ -41,12 +41,7 @@ MyApp.getInitialProps = async (ctx) => {
   const appProps = await App.getInitialProps(ctx)
   // Fetch global site settings from Strapi
   const globalRes = await fetchAPI("/global", {
-    populate: {
-      favicon: "*",
-      defaultSeo: {
-        populate: "*",
-      },
-    },
+    populate: "deep",
   })
   // Pass the data to our page via props
   return { ...appProps, pageProps: { global: globalRes.data } }
