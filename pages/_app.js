@@ -5,6 +5,8 @@ import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
 import { getStrapiMedia } from "../lib/media"
 import "../styles/global.css"
+import { useEffect } from "react"
+import CookieConsent from "react-cookie-consent"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
@@ -22,6 +24,9 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <GlobalContext.Provider value={global?.attributes}>
         <Component {...pageProps} />
+        <CookieConsent>
+          This website uses cookies to enhance the user experience.
+        </CookieConsent>
       </GlobalContext.Provider>
     </>
   )

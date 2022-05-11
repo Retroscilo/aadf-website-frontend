@@ -1,5 +1,6 @@
 module.exports = {
+  experimental: { images: { layoutRaw: true } },
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "res.cloudinary.com"],
   },
 }

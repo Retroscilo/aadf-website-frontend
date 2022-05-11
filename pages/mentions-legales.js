@@ -4,27 +4,25 @@ import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
 import mapToComponent from "../utils/getComponent"
 
-const Home = ({ homepage }) => {
-  console.log(homepage)
+const Legals = ({ pageData }) => {
+  console.log(pageData)
   return (
     <Layout>
-      <Seo seo={homepage?.attributes?.seo} />
-      {homepage?.attributes?.content?.map(mapToComponent)}
+      <Seo seo={pageData?.attributes?.seo} />
+      {pageData?.attributes?.content?.map(mapToComponent)}
     </Layout>
   )
 }
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepageRes] = await Promise.all([
-    fetchAPI("/homepage", { populate: "deep" }),
-  ])
+  const [res] = await Promise.all([fetchAPI("/legals", { populate: "deep" })])
   return {
     props: {
-      homepage: homepageRes.data,
+      pageData: res.data,
     },
     revalidate: 60,
   }
 }
 
-export default Home
+export default Legals
