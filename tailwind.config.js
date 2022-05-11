@@ -2,7 +2,7 @@ const { colors } = require(`tailwindcss/defaultTheme`)
 
 module.exports = {
   mode: "jit", // see https://tailwindcss.com/docs/just-in-time-mode
-  purge: ["./components/**/*.{js,jsx}", "./pages/**/*.js"],
+  purge: ["./components/**/*.{js,jsx}", "./pages/**/*.{js,jsx}","./utils/**/*.{js,jsx}"],
   darkMode: false, // or "media" or "class"
   theme: {
     spacing: {
