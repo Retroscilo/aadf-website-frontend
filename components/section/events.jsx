@@ -3,7 +3,7 @@ import NextEvent from "../element/nextEvent"
 import { v4 as uuidv4 } from "uuid"
 import ArrowLink from "../element/arrowLink"
 
-const Events = ({ title, passedEvents, nextEvent }) => {
+const Events = ({ title, passedEvents, nextEvent,arrowLink }) => {
   return (
     // <section className="max-w-[1500px] m-auto">
     <section className="container">
@@ -24,13 +24,17 @@ const Events = ({ title, passedEvents, nextEvent }) => {
           </div>
         </article>
       </div>
-      <ArrowLink
-        text="Voir tout les évènements"
-        style={{
-          justifyContent: "center",
-          marginTop: "20px",
-        }}
-      />
+      {
+        arrowLink && 
+          <ArrowLink
+          {...arrowLink}
+          style={{
+            justifyContent: "center",
+            marginTop: "20px",
+          }}
+        />
+      }
+    
     </section>
   )
 }

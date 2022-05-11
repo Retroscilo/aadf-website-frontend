@@ -1,6 +1,6 @@
 import CustomLink from "./customLink"
 
-const ArrowLink = ({ text, url, newTab, ...props }) => {
+const ArrowLink = ({ text, url, newTab,...props }) => {
   return (
     <CustomLink url={url} newTab={newTab}>
       <div className="flex items-center cursor-pointer" {...props}>
