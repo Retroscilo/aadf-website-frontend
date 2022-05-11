@@ -7,7 +7,7 @@ const Events = ({ title, passedEvents, nextEvent }) => {
   return (
     <section className="max-w-[1500px] m-auto">
       <h2 className="text-center mb-10">{title}</h2>
-      <div className="flex justify-between px-0 sm:px-1 flex-wrap lg:gap-10">
+      <div className="flex justify-between px-0 sm:px-1 flex-wrap lg:flex-nowrap gap-10">
         <article className="w-full">
           <h3 className="underlined-primary mb-10">À venir</h3>
           <NextEvent data={nextEvent.data.attributes} />

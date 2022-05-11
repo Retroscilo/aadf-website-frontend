@@ -4,15 +4,19 @@ import NotFound from "../components/NotFound"
 import Events from "../components/section/events"
 import LogoWrapper from "../components/section/logoWrapper"
 import { v4 as uuidv4 } from "uuid"
+import Mission from "../components/section/mission"
+import Navbar from "../components/element/navbar/Navbar"
 
 const Components = {
   section: {
     hero: Hero,
     events: Events,
     "logo-wrapper": LogoWrapper,
+    mission: Mission,
   },
   element: {
     "styled-image": StyledImage,
+    navbar: Navbar,
   },
   notFound: NotFound,
 }

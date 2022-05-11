@@ -4,53 +4,57 @@
 
 @font-face {
   font-family: "DosisRegular";
-  src: url("/fonts/dosis/dosis-v26-latin-regular.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-regular.woff2") format("woff2");
+  src: url("//public/fonts/dosis/dosis-v26-latin-regular.woff") format("woff"),
+    url("//public/fonts/dosis/dosis-v26-latin-regular.woff2") format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "DosisBold";
-  src: url("/fonts/dosis/dosis-v26-latin-700.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-700.woff2") format("woff2");
+  src: url("/public/fonts/dosis/dosis-v26-latin-700.woff") format("woff"),
+    url("/public/fonts/dosis/dosis-v26-latin-700.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "DosisMedium";
-  src: url("/fonts/dosis/dosis-v26-latin-500.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-500.woff2") format("woff2");
+  src: url("/public/fonts/dosis/dosis-v26-latin-500.woff") format("woff"),
+    url("/public/fonts/dosis/dosis-v26-latin-500.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "DosisSemiBold";
-  src: url("/fonts/dosis/dosis-v26-latin-600.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-600.woff2") format("woff2");
+  src: url("/public/fonts/dosis/dosis-v26-latin-600.woff") format("woff"),
+    url("/public/fonts/dosis/dosis-v26-latin-600.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "KarlaRegular";
-  src: url("/fonts/karla/karla-v22-latin-700.woff") format("woff"),
-    url("/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
+  src: url("/public/fonts/karla/karla-v22-latin-700.woff") format("woff"),
+    url("/public/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "KarlaSemiBold";
-  src: url("/fonts/karla/dosis-v22-latin-600.woff") format("woff"),
-    url("/fonts/karla/dosis-v22-latin-600.woff2") format("woff2");
+  src: url("/public/fonts/karla/karla-v22-latin-600.woff") format("woff"),
+    url("/public/fonts/karla/karla-v22-latin-600.woff2") format("woff2");
 }
 @font-face {
   font-family: "KarlaMedium";
-  src: url("/fonts/karla/karla-v22-latin-500.woff") format("woff"),
-    url("/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
+  src: url("/public/fonts/karla/karla-v22-latin-500.woff") format("woff"),
+    url("/public/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
 }
 
 html {
-  font-size: 18px;
   @apply text-primary-2 font-KarlaMedium lg:text-[20px] bg-default;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 * {
@@ -86,6 +90,16 @@ p {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
+a{
+  @apply cursor-pointer;
+}
+
+a:hover,
+a:focus,
+a:active {
+  @apply text-primary-2 no-underline;
+}
+
 a:hover .arrow {
   @apply translate-x-[10px];
 }
@@ -97,7 +111,7 @@ a:hover .arrow {
 }
 
 .buttonRounded {
-  @apply rounded-full border-[3px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out;
+  @apply rounded-full border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out;
 }
 
 .buttonSecondary2 {
@@ -112,21 +126,35 @@ a:hover .arrow {
   hover:text-primary-2;
 }
 
-.buttonOutline {
+.buttonOutlined {
   @apply bg-transparent
   text-primary-2
 }
 
 .buttonInverted {
-  @apply border-0 
+  @apply border-transparent
   bg-transparent 
   text-primary-2;
 }
 
-.buttonPrimary1.buttonOutline, .buttonPrimary1.buttonInverted{
+.buttonPrimary1.buttonOutlined, .buttonPrimary1.buttonInverted{
   @apply hover:bg-primary-1 hover:text-white;
 }
 
-.buttonSecondary2.buttonOutline, .buttonSecondary2.buttonInverted{
+.buttonPrimary1.buttonInverted{
+  @apply hover:border-[2px] hover:border-primary-1;
+}
+
+.buttonSecondary2.buttonOutlined, .buttonSecondary2.buttonInverted{
   @apply hover:bg-secondary-2 hover:text-white;
+}
+
+.buttonSecondary2.buttonInverted{
+  @apply hover:border-[2px] hover:border-secondary-2;
+}
+
+.wrapper {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
