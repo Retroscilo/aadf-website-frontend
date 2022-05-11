@@ -2,7 +2,7 @@ import Image from "../image"
 import ArrowLink from "./arrowLink"
 import CustomLink from "./customLink"
 
-const PastEvent = ({ newTab, image, date, title, arrowLink }) => {
+const PastEvent = ({ image, date, title, arrowLink }) => {
     const months = [
         "janvier",
         "février",
