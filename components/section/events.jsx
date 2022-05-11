@@ -7,12 +7,12 @@ const Events = ({ title, passedEvents, nextEvent }) => {
   return (
     <section className="max-w-[1500px] m-auto">
       <h2 className="text-center mb-10">{title}</h2>
-      <div className="flex justify-between px-0 sm:px-1 flex-wrap lg:flex-nowrap gap-10">
-        <article className="w-full">
+      <div className="flex justify-between px-0 sm:px-1 flex-wrap gap-10">
+        <article className="w-full md:w-fit">
           <h3 className="underlined-primary mb-10">À venir</h3>
           <NextEvent data={nextEvent.data.attributes} />
         </article>
-        <article className="w-full">
+        <article className="w-full md:w-fit">
           <h3 className="underlined-primary mb-10">Évènements passés</h3>
           <div className="flex flex-col">
             {passedEvents.data.map((event) => (
@@ -25,7 +25,10 @@ const Events = ({ title, passedEvents, nextEvent }) => {
       </div>
       <ArrowLink
         text="Voir tout les évènements"
-        style={{ justifyContent: "center", marginTop: "20px" }}
+        style={{
+          justifyContent: "center",
+          marginTop: "20px",
+        }}
       />
     </section>
   )
