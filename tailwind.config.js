@@ -6,7 +6,7 @@ module.exports = {
   darkMode: false, // or "media" or "class"
   theme: {
     spacing: {
-      0: "20px",
+      0: "0",
       1: "100px",
       2: "0.5rem",
       2.5: "0.625rem",

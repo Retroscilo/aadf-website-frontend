@@ -8,6 +8,7 @@ import Mission from "../components/section/mission"
 import Navbar from "../components/element/navbar/Navbar"
 import AdhesionSection from "../components/section/adhesionSection"
 import Actions from "../components/section/actions"
+import EspaceVeilles from "../components/section/espaceVeille"
 
 const Components = {
   section: {
@@ -16,7 +17,8 @@ const Components = {
     "logo-wrapper": LogoWrapper,
     mission: Mission,
     "adhesion-section": AdhesionSection,
-    actions: Actions
+    actions: Actions,
+    "espace-veille": EspaceVeilles,
   },
   element: {
     "styled-image": StyledImage,
