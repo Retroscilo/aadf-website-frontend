@@ -1,10 +1,11 @@
 import ArrowLink from "./arrowLink"
 import ButtonLink from "./buttonLink"
 import CustomImage from "./customImage"
+import PastEvent from "./pastEvent"
 
 const StyledImage = (data) => {
   console.log({data})
-  const { buttonLinks, customImages, arrowLink } = data
+  const { buttonLinks, customImages, arrowLink,pastEvents } = data
   return (
     <div className="flex flex-col gap-y-5 mt-10">
     <div className="flex gap-x-3">
@@ -27,6 +28,20 @@ const StyledImage = (data) => {
         </div>)}
       </div>
       {arrowLink && <ArrowLink url={arrowLink.url} text={arrowLink.text} newTab={arrowLink.newTab} />}
+      {
+        pastEvents?.map(({ id, arrowLink, image, newTab, url, title,date }) => {
+          return <div key={id} className="md:w-[472px]">
+            <PastEvent
+              arrowLink={arrowLink}
+              image={image}
+              newTab={newTab}
+              utl={url}
+              title={title}
+              date={date}
+            />
+          </div>
+        })
+      }
     </div>
   )
 }
