@@ -3,7 +3,7 @@ import Image from "../image"
 
 const OneMission = ({ content, icon }) => {
   return (
-    <div className="flex flex-row md:flex-col justify-center md:items-center md:gap-y-[24px]">
+    <div className="flex flex-row lg:flex-col justify-center lg:items-center lg:gap-y-[24px]">
       <div className="w-[38px] md:w-[96px]">
         <Image image={icon} />
       </div>

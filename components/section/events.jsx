@@ -5,10 +5,11 @@ import ArrowLink from "../element/arrowLink"
 
 const Events = ({ title, passedEvents, nextEvent }) => {
   return (
-    <section className="max-w-[1500px] m-auto">
+    // <section className="max-w-[1500px] m-auto">
+    <section className="container">
       <h2 className="text-center mb-10">{title}</h2>
-      <div className="flex justify-between px-0 sm:px-1 flex-wrap gap-10">
-        <article className="w-full md:w-fit">
+      <div className="flex justify-between flex-wrap gap-10">
+        <article className="w-full lg:w-fit">
           <h3 className="underlined-primary mb-10">À venir</h3>
           <NextEvent data={nextEvent.data.attributes} />
         </article>

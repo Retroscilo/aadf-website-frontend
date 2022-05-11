@@ -3,7 +3,7 @@ import OneMission from "../element/mission"
 const MissionWithDivider = ({mission}) => (
     <>
         <OneMission {...mission} />
-        <div className=" last-of-type:hidden w-[1px] h-[139px] inline-block mt-auto justify-self-end bg-primary-1" />
+        <div className=" hidden last-of-type:hidden w-[1px] h-[139px] lg:inline-block mt-auto justify-self-end bg-primary-1" />
     </>
 )
 
