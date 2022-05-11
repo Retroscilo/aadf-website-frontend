@@ -4,53 +4,57 @@
 
 @font-face {
   font-family: "DosisRegular";
-  src: url("/fonts/dosis/dosis-v26-latin-regular.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-regular.woff2") format("woff2");
+  src: url("public/fonts/dosis/dosis-v26-latin-regular.woff") format("woff"),
+    url("public/fonts/dosis/dosis-v26-latin-regular.woff2") format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "DosisBold";
-  src: url("/fonts/dosis/dosis-v26-latin-700.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-700.woff2") format("woff2");
+  src: url("public/fonts/dosis/dosis-v26-latin-700.woff") format("woff"),
+    url("public/fonts/dosis/dosis-v26-latin-700.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "DosisMedium";
-  src: url("/fonts/dosis/dosis-v26-latin-500.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-500.woff2") format("woff2");
+  src: url("public/fonts/dosis/dosis-v26-latin-500.woff") format("woff"),
+    url("public/fonts/dosis/dosis-v26-latin-500.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "DosisSemiBold";
-  src: url("/fonts/dosis/dosis-v26-latin-600.woff") format("woff"),
-    url("/fonts/dosis/dosis-v26-latin-600.woff2") format("woff2");
+  src: url("public/fonts/dosis/dosis-v26-latin-600.woff") format("woff"),
+    url("public/fonts/dosis/dosis-v26-latin-600.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "KarlaRegular";
-  src: url("/fonts/karla/karla-v22-latin-700.woff") format("woff"),
-    url("/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
+  src: url("public/fonts/karla/karla-v22-latin-700.woff") format("woff"),
+    url("public/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "KarlaSemiBold";
-  src: url("/fonts/karla/dosis-v22-latin-600.woff") format("woff"),
-    url("/fonts/karla/dosis-v22-latin-600.woff2") format("woff2");
+  src: url("public/fonts/karla/karla-v22-latin-600.woff") format("woff"),
+    url("public/fonts/karla/karla-v22-latin-600.woff2") format("woff2");
 }
 @font-face {
   font-family: "KarlaMedium";
-  src: url("/fonts/karla/karla-v22-latin-500.woff") format("woff"),
-    url("/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
+  src: url("public/fonts/karla/karla-v22-latin-500.woff") format("woff"),
+    url("public/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
 }
 
 html {
-  font-size: 18px;
   @apply text-primary-2 font-KarlaMedium lg:text-[20px] bg-default;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 * {
@@ -137,4 +141,10 @@ a:hover .arrow {
 
 .buttonSecondary2.buttonInverted{
   @apply hover:border-[2px] hover:border-secondary-2;
+}
+
+.wrapper {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }

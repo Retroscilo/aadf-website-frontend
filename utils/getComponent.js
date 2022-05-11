@@ -1,5 +1,6 @@
 import StyledImage from "../components/element/styled-image"
 import Hero from "../components/section/hero"
+import Navbar from "../components/element/navbar/Navbar"
 
 const Components = {
   section: {
@@ -7,6 +8,7 @@ const Components = {
   },
   element: {
     "styled-image": StyledImage,
+    navbar: Navbar,
   },
 }
 
