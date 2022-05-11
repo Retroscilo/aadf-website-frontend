@@ -1,9 +1,11 @@
 import StyledImage from "../components/element/styled-image"
 import Hero from "../components/section/hero"
+import Mission from "../components/section/mission"
 
 const Components = {
   section: {
     hero: Hero,
+    mission: Mission,
   },
   element: {
     "styled-image": StyledImage,
