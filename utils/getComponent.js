@@ -5,7 +5,6 @@ import Events from "../components/section/events"
 import LogoWrapper from "../components/section/logoWrapper"
 import { v4 as uuidv4 } from "uuid"
 import Mission from "../components/section/mission"
-import Navbar from "../components/element/navbar/Navbar"
 import AdhesionSection from "../components/section/adhesionSection"
 import Actions from "../components/section/actions"
 import EspaceVeilles from "../components/section/espaceVeille"
@@ -22,7 +21,6 @@ const Components = {
   },
   element: {
     "styled-image": StyledImage,
-    navbar: Navbar,
   },
   notFound: NotFound,
 }
