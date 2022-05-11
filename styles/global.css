@@ -86,6 +86,10 @@ p {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
+a{
+  @apply cursor-pointer;
+}
+
 a:hover,
 a:focus,
 a:active {

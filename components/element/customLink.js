@@ -1,6 +1,9 @@
 import Link from "next/link"
 
 const CustomLink = ({ url, newTab, children }) => {
+    if (!url) {
+        return <>{children}</>
+    }
     if (newTab) {
         return (
             <a href={url} target="_blank" rel="noopener noreferrer">

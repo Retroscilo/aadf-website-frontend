@@ -35,7 +35,7 @@ const StyledImage = (data) => {
               arrowLink={arrowLink}
               image={image}
               newTab={newTab}
-              utl={url}
+              url={url}
               title={title}
               date={date}
             />
