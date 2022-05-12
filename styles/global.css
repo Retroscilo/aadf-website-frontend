@@ -32,6 +32,13 @@
 
 @font-face {
   font-family: "KarlaRegular";
+  src: url("/fonts/karla/karla-v22-latin-regular.woff") format("woff"),
+    url("/fonts/karla/karla-v22-latin-regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "KarlaBold";
   src: url("/fonts/karla/karla-v22-latin-700.woff") format("woff"),
     url("/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
   font-weight: bold;
@@ -46,10 +53,14 @@
   font-family: "KarlaMedium";
   src: url("/fonts/karla/karla-v22-latin-500.woff") format("woff"),
     url("/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
+  font-size: 500;
 }
 
-html {
+html,body {
   @apply text-primary-2 font-KarlaMedium lg:text-[20px] bg-default;
+}
+
+html{
   font-size: 62.5%;
 }
 
@@ -79,7 +90,7 @@ h4 {
 
 b,
 strong {
-  @apply font-DosisSemiBold text-[24px] lg:text-[22px];
+  @apply font-KarlaBold text-[24px] lg:text-[22px];
 }
 
 .detail {
@@ -118,8 +129,16 @@ a:hover .arrow {
   bg-primary-1;
 }
 
+.button {
+  @apply border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out
+}
+
 .buttonRounded {
-  @apply rounded-full border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out;
+  @apply rounded-full;
+}
+
+.buttonSquared{
+  @apply rounded-none;
 }
 
 .buttonSecondary2 {

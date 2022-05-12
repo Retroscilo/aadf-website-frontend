@@ -2,16 +2,18 @@ import PassedEvents from "../element/passedEvent"
 import NextEvent from "../element/nextEvent"
 import { v4 as uuidv4 } from "uuid"
 import ArrowLink from "../element/arrowLink"
+import ButtonLink from "../element/buttonLink"
 
-const Events = ({ title, passedEvents, nextEvent,arrowLink }) => {
+const Events = ({ title, passedEvents, nextEvent,arrowLink, buttonLink }) => {
   return (
     // <section className="max-w-[1500px] m-auto">
-    <section className="wrapper">
+    <section className="container">
       <h2 className="text-center mb-10">{title}</h2>
       <div className="flex justify-between flex-wrap">
         <article className="w-full lg:w-1/2">
           <h3 className="underlined-primary mb-10">À venir</h3>
           <NextEvent data={nextEvent.data.attributes} />
+          <ButtonLink {...buttonLink} />
         </article>
         <article className="w-full md:w-fit">
           <h3 className="underlined-primary mb-10">Évènements passés</h3>

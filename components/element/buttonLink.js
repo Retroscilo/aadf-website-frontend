@@ -1,6 +1,6 @@
 import CustomLink from "./customLink"
 
-const ButtonLink = ( { text, url, newTab, color, type,className }) => {
+const ButtonLink = ( { text, url, newTab, color, type,className,form }) => {
     const buttonColor = {
         "rouge": "buttonPrimary1",
         "jaune": "buttonSecondary2"
@@ -10,9 +10,13 @@ const ButtonLink = ( { text, url, newTab, color, type,className }) => {
         "outlined": "buttonOutlined",
         "inverted": "buttonInverted"
     }
+    const buttonForm = {
+        "rounded": "buttonRounded",
+        "squared": "buttonSquared"
+    }
     return (
         <CustomLink url={url} newTab={newTab}>
-            <div className={` buttonRounded ${buttonColor[color]} ${buttonType[type]} ${className} `}>
+            <div className={`button ${buttonColor[form]} ${buttonColor[color]} ${buttonType[type]} ${className} `}>
                 {text}
             </div>
         </CustomLink>
