@@ -1,6 +1,4 @@
-import getMediaFromAttributes from "../../utils/getMediaFromAttributes"
 import { getStrapiMedia } from "../../lib/media"
-import Image from "next/image"
 
 const Hero = ({ title, subtitle, background }) => {
   return (
