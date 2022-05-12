@@ -217,7 +217,7 @@ a:hover .arrow {
 }
 
 section,.section{
-  @apply mt-[60px] md:mt-[100px] md:mb-[37px] mb-[35px] flex flex-col gap-[35px] md:gap-y-[72px] ;
+  @apply mt-[60px] md:mt-[100px] md:mb-[37px] mb-[35px] flex flex-col gap-y-[35px] md:gap-y-[72px] ;
 }
 
 .underlined-primary::after {
