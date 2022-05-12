@@ -28,8 +28,8 @@ const DataEvent = ({ data, url, ...props }) => {
           className="w-[199px] h-[127px] object-cover object-left-top flex-none"
         />
         <div className="flex flex-col text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-[137px]">
-          <p>{data.title}</p>
-          <p className="text-date detail">{date}</p>
+          <span>{data.title}</span>
+          <span className="text-date detail">{date}</span>
         </div>
       </div>
       <div className="hidden md:flex justify-end mt-[13px] mb-10">
