@@ -25,7 +25,7 @@ const Events = ({ title, passedEvents, nextEvent, arrowLink }) => {
           </div>
         </article>
       </div>
-      <div className="flex md:justify-center justify-start  lg:mt-[20px]">
+      <div className="flex md:justify-center justify-start m-0">
         {arrowLink && <ArrowLink {...arrowLink} />}
       </div>
     </section>
