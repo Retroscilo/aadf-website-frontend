@@ -5,6 +5,7 @@ import Events from "../components/section/events"
 import LogoWrapper from "../components/section/logoWrapper"
 import { v4 as uuidv4 } from "uuid"
 import Mission from "../components/section/mission"
+import GridContent from "../components/element/GridContent"
 
 const Components = {
   section: {
@@ -15,6 +16,7 @@ const Components = {
   },
   element: {
     "styled-image": StyledImage,
+    "grid-content": GridContent,
   },
   notFound: NotFound,
 }

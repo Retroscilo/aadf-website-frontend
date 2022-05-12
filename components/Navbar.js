@@ -123,7 +123,7 @@ const Navbar = () => {
         style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         <div className="wrapper h-full flex items-center justify-between">
-          <a href="https://bulma.io">
+          <a href="/">
             <img
               src={getStrapiMedia(Navbar.logo)}
               alt={Navbar.logo.data.attributes.alternativeText}
