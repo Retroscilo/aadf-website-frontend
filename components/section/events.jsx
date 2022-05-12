@@ -6,14 +6,14 @@ import ArrowLink from "../element/arrowLink"
 const Events = ({ title, passedEvents, nextEvent,arrowLink }) => {
   return (
     // <section className="max-w-[1500px] m-auto">
-    <section className="container">
+    <section className="container w-full">
       <h2 className="text-center mb-10">{title}</h2>
-      <div className="flex justify-between flex-wrap">
-        <article className="w-full md:w-1/4 lg:w-1/2">
+      <div className="flex w-full justify-between flex-wrap">
+        <article className="w-full md:w-full lg:w-1/2">
           <h3 className="underlined-primary mb-10">À venir</h3>
           <NextEvent data={nextEvent.data.attributes} />
         </article>
-        <article className="w-full md:w-fit">
+        <article className="w-[40%] flex flex-col">
           <h3 className="underlined-primary mb-10">Évènements passés</h3>
           <div className="flex flex-col lg:gap-y-[72px]">
             {passedEvents.data.map((event) => (

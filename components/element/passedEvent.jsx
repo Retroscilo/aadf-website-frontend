@@ -17,18 +17,22 @@ const DataEvent = ({ data, url, ...props }) => {
 
   return (
     <CustomLink url={url} newTab={false}>
-      <div className="flex flex-col md:flex-row items-center gap-y-[30px] md:gap-y-0 md:items-stretch  md:gap-x-[13px] mb-4 justify-between">
-        <Image
-          src={getStrapiMedia(data.image)}
-          width={199}
-          height={127}
-          alt={data.image.data.attributes.alternativeText}
-          placeholder="blur"
-          blurDataURL={getStrapiMedia(data.image)}
-          className="w-[199px] h-[127px] object-cover object-left-top flex-none"
-        />
+      <div className="flex w-full relative flex-col md:flex-row items-center gap-y-[30px] md:gap-y-0 md:items-stretch  md:gap-x-[13px] mb-4 justify-between">
+        <div className="w-1/2 relative">
+          <Image
+            src={getStrapiMedia(data.image)}
+            // width={199}
+            // height={127}
+            layout="fill"
+            alt={data.image.data.attributes.alternativeText}
+            placeholder="blur"
+            blurDataURL={getStrapiMedia(data.image)}
+            className="w-[199px] h-[127px] object-cover object-left-top flex-none"
+          />
+        </div>
+  
         <div className="flex flex-col text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-[137px]">
-          <span>{data.title}</span>
+          <span className="max-3-lines">{data.title}</span>
           <span className="text-date detail">{date}</span>
         </div>
       </div>
