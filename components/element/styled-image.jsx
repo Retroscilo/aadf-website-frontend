@@ -1,4 +1,4 @@
-import Image from "next/Image"
+import Image from "next/image"
 import { getStrapiMedia } from "../../lib/media"
 
 const StyledImage = ({ data, width, height, ...props }) => (
