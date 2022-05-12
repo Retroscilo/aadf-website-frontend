@@ -19,7 +19,7 @@ const Events = ({ title, passedEvents, nextEvent, arrowLink }) => {
           <div className="flex flex-col lg:gap-y-[72px]">
             {passedEvents.data.map((event) => (
               <div key={uuidv4()} className="lg:max-w-[500px]">
-                <PassedEvents url="/evenements" data={event.attributes} />
+                <PassedEvents data={event.attributes} />
               </div>
             ))}
           </div>
