@@ -11,6 +11,10 @@ import PricingSection from "../components/section/pricingSection"
 import TextSection from "../components/section/textSection"
 import MissionCard from "../components/element/missionCard"
 import SingleImageSection from "../components/section/singleImageSection"
+import AdhesionSection from "../components/section/adhesionSection"
+import Actions from "../components/section/actions"
+import EspaceVeilles from "../components/section/espaceVeille"
+import PresentationSection from "../components/section/presentationSection"
 
 const Components = {
   section: {
@@ -22,6 +26,10 @@ const Components = {
     "pricing-section": PricingSection,
     "text-section": TextSection,
     "single-image-section": SingleImageSection,
+    "adhesion-section": AdhesionSection,
+    actions: Actions,
+    "espace-veille": EspaceVeilles,
+    "presentation-section": PresentationSection,
   },
   element: {
     "styled-image": StyledImage,
@@ -32,6 +40,7 @@ const Components = {
 }
 
 function getComponent(component) {
+  console.log({ component })
   const [type, name] = component.split(".")
 
   return Components[type]?.[name] || Components.notFound

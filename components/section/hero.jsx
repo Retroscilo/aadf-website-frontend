@@ -1,21 +1,27 @@
-import getMediaFromAttributes from "../../utils/getMediaFromAttributes"
 import { getStrapiMedia } from "../../lib/media"
-import Image from "next/image"
 
 const Hero = ({ title, subtitle, background }) => {
   return (
     <div
-      className="w-full mb-[100px] flex flex-col align-middle justify-end"
+      className="w-screen h-[478px]"
       style={{
         background: `url(${getStrapiMedia(background)})`,
         backgroundSize: "cover",
-        minHeight: "478px",
+        backgroundPosition: "center",
         position: "relative",
       }}
     >
-      <div className="ml-0 md:ml-1 w-[433px] sm:w-[50%] py-32 max-w-[1500px]">
-        <h1 className="text-white uppercase ">{title}</h1>
-        <h3 className="text-white ">{subtitle}</h3>
+      <div className="bg-black bg-opacity-[17%] w-screen h-full flex flex-col-reverse">
+        <div className="max-w-[1500px] mx-auto">
+          <div className="w-[70%] mb-32 px-32 xl:px-0">
+            <h1 className="text-white font-DosisSemiBold sm:font-DosisBold uppercase ">
+              {title}
+            </h1>
+            <h3 className="text-white font-KarlaMedium text-[24px] sm:text-[28px] font-normal leading-[28px] sm:leading-[33px] mt-[10px] sm:mt-[0px]">
+              {subtitle}
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   )
