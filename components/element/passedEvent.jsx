@@ -17,8 +17,8 @@ const DataEvent = ({ data, url, ...props }) => {
 
   return (
     <CustomLink url={url} newTab={false}>
-      <div className="flex w-full relative flex-col md:flex-row items-center gap-y-[30px] md:gap-y-0 md:items-stretch  md:gap-x-[13px] mb-4 justify-between">
-        <div className="lg:w-1/2 lg:h-auto w-[209px] h-[139px] sm:w-[418px] sm:h-[278px] relative">
+      <div className="flex w-full relative flex-col md:flex-row items-center gap-y-[30px] md:gap-y-0 md:items-stretch  md:gap-x-[13px] justify-between mb-[35px] ">
+        <div className="lg:w-1/2 lg:h-auto lg:min-h-[139px] w-[209px] h-[139px] sm:w-[418px] sm:h-[278px] relative">
           <Image
             src={getStrapiMedia(data.image)}
             // width={199}
@@ -31,12 +31,12 @@ const DataEvent = ({ data, url, ...props }) => {
           />
         </div>
   
-        <div className="flex flex-col grow text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-[137px] md:h-auto">
+        <div className="flex flex-col grow text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-auto">
           <span className="max-3-lines">{data.title}</span>
           <span className="text-date detail">{date}</span>
         </div>
       </div>
-      <div className="hidden md:flex justify-end mt-[13px] mb-10">
+      <div className="hidden md:flex justify-end mt-[13px]">
         <ArrowLink text="Voir les détails" url={url} />
       </div>
     </CustomLink>

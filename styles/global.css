@@ -57,7 +57,7 @@
 }
 
 html,body {
-  @apply text-primary-2 font-KarlaMedium lg:text-[20px] bg-default;
+  @apply text-primary-2 font-KarlaMedium text-[18px] lg:text-[20px] bg-default;
 }
 
 html{
@@ -217,6 +217,6 @@ a:hover .arrow {
 }
 
 section,.section{
-  @apply mt-[100px] mb-[137px] flex flex-col gap-y-[72px];
+  @apply mt-[60px] md:mt-[100px] md:mb-[137px] mb-[72px] flex flex-col gap-[35px] md:gap-y-[72px] ;
 }
 

@@ -25,14 +25,20 @@ const NextEvent = ({ data }) => {
     }
   }, [data])
   return (
-      <>
-        <CustomImage
-          image={data.image}
-        />
-        <h4 className="mt-[44px]">{`${data.title} : le ${eventDate}`}</h4>
+    <>
+      <CustomImage image={data.image} />
+      <h4 className="mt-[44px]">{`${data.title} : le ${eventDate}`}</h4>
       <p className="text-date detail mt-[10px] mb-[20px]">{publishedDate}</p>
-      <ButtonLink text={"S'inscrire à l'évènement"} url={data.url} type={"outlined"} form={"squared"}  newTab={ false }/>
-      </>
+      <div className="flex justify-center lg:justify-start">
+        <ButtonLink
+          text={"S'inscrire à l'évènement"}
+          url={data.url}
+          type={"outlined"}
+          form={"squared"}
+          newTab={false}
+        />
+      </div>
+    </>
   )
 }
 

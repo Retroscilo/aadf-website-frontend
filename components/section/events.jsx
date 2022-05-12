@@ -3,28 +3,19 @@ import NextEvent from "../element/nextEvent"
 import { v4 as uuidv4 } from "uuid"
 import ArrowLink from "../element/arrowLink"
 
-const Events = ({ title, passedEvents, nextEvent,arrowLink }) => {
+const Events = ({ title, passedEvents, nextEvent, arrowLink }) => {
   return (
-    // <section className="max-w-[1500px] m-auto">
     <section className="container w-full">
-      <h2 className="text-center mb-10">{title}</h2>
+      <h2 className="text-center">{title}</h2>
       <div className="flex w-full justify-between flex-wrap">
-        <article className="w-full md:w-full lg:w-1/2">
-          <h3 className="underlined-primary mb-10">À venir</h3>
+        <article className="w-full md:w-full lg:w-1/2 mb-[72px] md:mb-[35px]">
+          <h3 className="underlined-primary mb-[35px] md:mb-[72px]">À venir</h3>
           <NextEvent data={nextEvent.data.attributes} />
         </article>
-        {/* <article className="w-full flex flex-col">
-          <h3 className="underlined-primary mb-10">Évènements passés</h3>
-          <div className="flex flex-col lg:gap-y-[72px]">
-            {passedEvents.data.map((event) => (
-              <div key={uuidv4()} className="lg:max-w-[500px]">
-                <PassedEvents url="/evenements" data={event.attributes} />
-              </div>
-            ))}
-          </div>
-        </article> */}
         <article className="w-full lg:w-[40%]">
-          <h3 className="underlined-primary mb-10">Évènements passés</h3>
+          <h3 className="underlined-primary mb-[35px] md:mb-[72px]">
+            Évènements passés
+          </h3>
           <div className="flex flex-col lg:gap-y-[72px]">
             {passedEvents.data.map((event) => (
               <div key={uuidv4()} className="lg:max-w-[500px]">
@@ -34,16 +25,9 @@ const Events = ({ title, passedEvents, nextEvent,arrowLink }) => {
           </div>
         </article>
       </div>
-      {
-        arrowLink && 
-          <ArrowLink
-          {...arrowLink}
-          style={{
-            justifyContent: "center",
-            marginTop: "20px",
-          }}
-        />
-      }
+      <div className="flex md:justify-center justify-start  lg:mt-[20px]">
+        {arrowLink && <ArrowLink {...arrowLink} />}
+      </div>
     </section>
   )
 }
