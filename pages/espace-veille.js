@@ -19,7 +19,7 @@ const Veille = ({ pageData, categories }) => {
         <h1 className="mb-6">Espace veille</h1>
         <h3>Le rendez-vous des Analystes curieux</h3>
       </header>
-      <div className="flex gap-6 mb-20 justify-center">
+      <div className="flex gap-6 mb-20 justify-center flex-wrap">
         <Pill
           text="Tout les articles"
           selectedCategory={selectedCategory}
