@@ -53,3 +53,13 @@ img:hover {
   left: 0;
   bottom: -5px;
 }
+
+.underlined-black::after{
+  content: "";
+  width: 200%;
+  height: 1px;
+  background: black;
+  position: absolute;
+  left: -50%;
+  bottom: -14px;
+}

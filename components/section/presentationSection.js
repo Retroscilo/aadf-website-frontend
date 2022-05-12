@@ -10,20 +10,18 @@ const PresentationSection = ({
   imageFirst,
   arrowLink,
 }) => {
-//   const router = useRouter()
-//   console.log( router.basePath )
   return (
-    <section className="">
+    <section className="container">
       <h2 className="text-center">{title}</h2>
-      <div className={`flex w-full container justify-between gap-x-[172px]`}>
-        <div className={`w-full  ${imageFirst ? "px-[35px] order-first" : "order-last"}`}>
+      <div className={`flex flex-col lg:flex-row gap-y-[35px] lg:gap-y-[0px] lg:gap-x-[172px]`}>
+        <div className={`w-full sm:w-[60%] lg:w-full  ${imageFirst ? "md:px-[35px] m-auto lg:m-0 order-first" : "order-last"}`}>
           <CustomImage {...image} />
         </div>
         <div className={`w-full`}>
           <MarkdownToJsx>{content}</MarkdownToJsx>
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex lg:justify-center">
         <ArrowLink {...arrowLink} />
       </div>
     </section>

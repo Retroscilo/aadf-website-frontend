@@ -1,22 +1,22 @@
 import OneMission from "../element/mission"
 
-const MissionWithDivider = ({mission}) => (
+const MissionWithDivider = ({mission,isLast}) => (
     <>
-        <OneMission {...mission} />
-        <div className="last-of-type:hidden w-[85.6px] h-[1px] lg:w-[1px] lg:h-[139px] lg:inline-block mt-auto justify-self-end bg-primary-2 lg:bg-primary-1" />
+        <OneMission {...mission} isLast={isLast} />
+        <div className="hidden last-of-type:hidden lg:w-[1px] lg:h-[139px] lg:inline-block mt-auto justify-self-end lg:bg-primary-1" />
     </>
 )
 
 const Mission = ({ title, missions }) => {
     return (
-        <div className="container">
-            <h2 className="mb-[73px] text-center">{title}</h2>
+        <section className="container">
+            <h2 className="text-left lg:text-center">{title}</h2>
             <div className="flex flex-col lg:justify-between lg:flex-row gap-y-10 flex-wrap">
                 {
-                    missions?.map((mission) => <MissionWithDivider key={mission.id} mission={mission} />)
-                }
+                    missions?.map((mission,index) => <MissionWithDivider key={mission.id} isLast={index === missions.length - 1} mission={mission} />)
+                } 
             </div>
-        </div>
+        </section>
     )
 }
 
