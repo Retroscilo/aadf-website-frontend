@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { GlobalContext } from "../pages/_app"
 import ButtonLink from "./element/buttonLink"
 import { color } from "tailwindcss/lib/util/dataTypes"
-
+//
 const Navbar = () => {
   const { Navbar } = useContext(GlobalContext)
   const menu = Navbar?.menus
