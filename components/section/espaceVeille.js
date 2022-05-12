@@ -4,7 +4,7 @@ import Veille from "../element/veille"
 const EspaceVeilles = ({ title, arrowLink, veilles }) => {
   return (
     <section>
-      <h2 className="ml-[2rem] lg:text-center">{title}</h2>
+      <h2 className="container m-0 lg:m-auto lg:text-center">{title}</h2>
       <div className="flex w-full overflow-auto py-[2rem] gap-x-[35px] lg:gap-x-[126px]">
         {veilles?.data?.map((veille) => (
           <Veille {...veille.attributes} />
