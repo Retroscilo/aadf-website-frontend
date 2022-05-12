@@ -1,6 +1,6 @@
 import CustomLink from "./customLink"
 
-const ButtonLink = ( { text, url, newTab, color, type,className,form }) => {
+const ButtonLink = ( { text, url, newTab="false", color="rouge" , type="full" ,form = "rounded",className }) => {
     const buttonColor = {
         "rouge": "buttonPrimary1",
         "jaune": "buttonSecondary2"
