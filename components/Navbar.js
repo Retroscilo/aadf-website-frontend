@@ -9,6 +9,7 @@ const Navbar = () => {
   const menu = Navbar.menus
   const btns = Navbar.Cta
 
+  console.log(btns)
   const closeMenu = () => {
     const el = document.getElementById("menu-content")
     el.classList.add("hidden")
@@ -103,12 +104,7 @@ const Navbar = () => {
               <ul>
                 {btns.map((item, key) => (
                   <li key={key} className="mt-[3.2rem] ml-[.5rem]">
-                    <ButtonLink
-                      text={item.text}
-                      type={item.type}
-                      url={item.url}
-                      newTab={item.newTab}
-                    />
+                    <ButtonLink {...item} />
                   </li>
                 ))}
               </ul>
@@ -149,12 +145,7 @@ const Navbar = () => {
             <ul className="flex gap-x-[3rem]">
               {btns.map((item, key) => (
                 <li key={key}>
-                  <ButtonLink
-                    text={item.text}
-                    type={item.type}
-                    url={item.url}
-                    newTab={item.newTab}
-                  />
+                  <ButtonLink {...item} />
                 </li>
               ))}
             </ul>
