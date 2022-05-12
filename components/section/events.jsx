@@ -9,7 +9,7 @@ const Events = ({ title, passedEvents, nextEvent,arrowLink }) => {
     <section className="container">
       <h2 className="text-center mb-10">{title}</h2>
       <div className="flex justify-between flex-wrap">
-        <article className="w-full lg:w-1/2">
+        <article className="w-full md:w-1/4 lg:w-1/2">
           <h3 className="underlined-primary mb-10">À venir</h3>
           <NextEvent data={nextEvent.data.attributes} />
         </article>

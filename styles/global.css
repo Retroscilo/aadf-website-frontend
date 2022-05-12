@@ -101,7 +101,7 @@ p,ul,ol {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
-p{
+.markdown p{
   @apply mb-[2rem];
 }
 
@@ -191,20 +191,20 @@ a:hover .arrow {
 }
 
 
-ol,
-ul {
+.markdown ol,
+.markdown ul {
   @apply mt-[20px] pl-[20px] lg:pl-[30px];
 }
 
-ul {
+.markdown ul {
   list-style-type: disc;
 }
 
-ol {
+.markdown ol {
   list-style-type: decimal;
 }
 
-ul li {
+.markdown ul li {
   @apply my-[2.5rem];
 }
 
