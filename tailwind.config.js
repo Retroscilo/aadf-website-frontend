@@ -53,10 +53,10 @@ module.exports = {
         default: "#F9F9F9",
       },
       container: {
-        center: false,
+        maxWidth: "128rem",
+        center: true,
         padding: {
-          DEFAULT: "0 20px",
-          sm: "0 100px",
+          DEFAULT: "2rem",
         },
       },
     },

@@ -5,7 +5,6 @@ import Events from "../components/section/events"
 import LogoWrapper from "../components/section/logoWrapper"
 import { v4 as uuidv4 } from "uuid"
 import Mission from "../components/section/mission"
-import Navbar from "../components/element/navbar/Navbar"
 import Articles from "../components/section/articles"
 import PricingSection from "../components/section/pricingSection"
 import TextSection from "../components/section/textSection"
@@ -25,7 +24,6 @@ const Components = {
   },
   element: {
     "styled-image": StyledImage,
-    navbar: Navbar,
     "mission-card": MissionCard,
   },
   notFound: NotFound,
