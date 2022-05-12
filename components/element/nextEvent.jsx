@@ -26,8 +26,11 @@ const NextEvent = ({ data }) => {
   return (
     <Link href="/evenements">
       <>
-        <CustomImage
-          image={data.image}
+        <StyledImage
+          data={data.image}
+          width={600}
+          height={350}
+          className="mb-8 w-[400px] h-[225px] md:w-[600px] md:h-[350px]"
         />
         <h4>{`${data.title} : le ${eventDate}`}</h4>
         <p className="text-date detail">{publishedDate}</p>

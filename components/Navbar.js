@@ -3,11 +3,11 @@ import { useContext } from "react"
 import { GlobalContext } from "../pages/_app"
 import ButtonLink from "./element/buttonLink"
 import { color } from "tailwindcss/lib/util/dataTypes"
-
+//
 const Navbar = () => {
   const { Navbar } = useContext(GlobalContext)
-  const menu = Navbar.menus
-  const btns = Navbar.Cta
+  const menu = Navbar?.menus
+  const btns = Navbar?.Cta
 
   const closeMenu = () => {
     const el = document.getElementById("menu-content")
@@ -27,11 +27,11 @@ const Navbar = () => {
         <div className="wrapper h-full">
           <div className="h-full flex items-center justify-between">
             <figure>
-              <img
+              {/* <img
                 src={getStrapiMedia(Navbar.logo)}
                 alt={Navbar.logo.data.attributes.alternativeText}
                 width={68}
-              />
+              /> */}
             </figure>
 
             <button type="button" className="py-4" onClick={openMenu}>
@@ -47,21 +47,21 @@ const Navbar = () => {
                   x2="35"
                   y2="1.25"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
                 <line
                   y1="12.25"
                   x2="25"
                   y2="12.25"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
                 <line
                   y1="22.25"
                   x2="14"
                   y2="22.25"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
               </svg>
             </button>
@@ -82,8 +82,8 @@ const Navbar = () => {
                   <path
                     d="M15.5728 1L1.91016 17M15.5728 17L1.91016 1L15.5728 17Z"
                     stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </button>

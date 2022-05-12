@@ -11,6 +11,11 @@ import Actions from "../components/section/actions"
 import EspaceVeilles from "../components/section/espaceVeille"
 import PresentationSection from "../components/section/presentationSection"
 import GridContent from "../components/element/GridContent"
+import Articles from "../components/section/articles"
+import PricingSection from "../components/section/pricingSection"
+import TextSection from "../components/section/textSection"
+import MissionCard from "../components/element/missionCard"
+import SingleImageSection from "../components/section/singleImageSection"
 
 const Components = {
   section: {
@@ -21,11 +26,16 @@ const Components = {
     "adhesion-section": AdhesionSection,
     actions: Actions,
     "espace-veille": EspaceVeilles,
-    "presentation-section": PresentationSection
+    "presentation-section": PresentationSection,
+    articles: Articles,
+    "pricing-section": PricingSection,
+    "text-section": TextSection,
+    "single-image-section": SingleImageSection,
   },
   element: {
     "styled-image": StyledImage,
     "grid-content": GridContent,
+    "mission-card": MissionCard,
   },
   notFound: NotFound,
 }

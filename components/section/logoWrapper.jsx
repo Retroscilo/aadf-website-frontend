@@ -1,4 +1,4 @@
-import Logo from "../element/logo"
+import Logo from "../element/Logo"
 import { v4 } from "uuid"
 
 const LogoWrapper = ({ title, logo }) => {
