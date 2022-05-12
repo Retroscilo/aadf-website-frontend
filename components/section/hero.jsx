@@ -3,7 +3,7 @@ import { getStrapiMedia } from "../../lib/media"
 const Hero = ({ title, subtitle, background }) => {
   return (
     <div
-      className="w-screen h-[478px]"
+      className="w-full h-[478px]"
       style={{
         background: `url(${getStrapiMedia(background)})`,
         backgroundSize: "cover",
@@ -11,7 +11,7 @@ const Hero = ({ title, subtitle, background }) => {
         position: "relative",
       }}
     >
-      <div className="bg-black bg-opacity-[17%] w-screen h-full flex flex-col-reverse">
+      <div className="bg-black bg-opacity-[17%] w-full h-full flex flex-col-reverse">
         <div className="max-w-[1500px] mx-auto">
           <div className="w-[70%] mb-32 px-32 xl:px-0">
             <h1 className="text-white font-DosisSemiBold sm:font-DosisBold uppercase ">
