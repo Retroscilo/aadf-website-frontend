@@ -70,7 +70,7 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className="py-[3rem] fixed inset-[0] m-[0] bg-white hidden"
+            className="py-[3rem] fixed inset-[0] m-[0] bg-[#ffffff] hidden"
             id="menu-content"
           >
             <div className="wrapper">
