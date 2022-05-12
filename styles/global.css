@@ -32,6 +32,13 @@
 
 @font-face {
   font-family: "KarlaRegular";
+  src: url("/fonts/karla/karla-v22-latin-regular.woff") format("woff"),
+    url("/fonts/karla/karla-v22-latin-regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "KarlaBold";
   src: url("/fonts/karla/karla-v22-latin-700.woff") format("woff"),
     url("/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
   font-weight: bold;
@@ -46,10 +53,14 @@
   font-family: "KarlaMedium";
   src: url("/fonts/karla/karla-v22-latin-500.woff") format("woff"),
     url("/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
+  font-size: 500;
 }
 
-html {
-  @apply text-primary-2 font-KarlaMedium lg:text-[20px] bg-default;
+html,body {
+  @apply text-primary-2 font-KarlaMedium text-[18px] lg:text-[20px] bg-default;
+}
+
+html{
   font-size: 62.5%;
 }
 
@@ -79,7 +90,7 @@ h4 {
 
 b,
 strong {
-  @apply font-DosisSemiBold text-[24px] lg:text-[22px];
+  @apply font-KarlaBold text-[24px] lg:text-[22px];
 }
 
 .detail {
@@ -90,7 +101,7 @@ p,ul,ol {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
-p{
+.markdown p{
   @apply mb-[2rem];
 }
 
@@ -118,8 +129,16 @@ a:hover .arrow {
   bg-primary-1;
 }
 
+.button {
+  @apply border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out
+}
+
 .buttonRounded {
-  @apply rounded-full border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out;
+  @apply rounded-full;
+}
+
+.buttonSquared{
+  @apply rounded-none;
 }
 
 .buttonSecondary2 {
@@ -172,20 +191,20 @@ a:hover .arrow {
 }
 
 
-ol,
-ul {
+.markdown ol,
+.markdown ul {
   @apply mt-[20px] pl-[20px] lg:pl-[30px];
 }
 
-ul {
+.markdown ul {
   list-style-type: disc;
 }
 
-ol {
+.markdown ol {
   list-style-type: decimal;
 }
 
-ul li {
+.markdown ul li {
   @apply my-[2.5rem];
   list-style: none;
 }
@@ -199,6 +218,26 @@ ul li {
 }
 
 section,.section{
-  @apply mt-[100px] mb-[137px] flex flex-col gap-y-[72px];
+  @apply mt-[60px] md:mt-[100px] md:mb-[37px] mb-[35px] flex flex-col gap-[35px] md:gap-y-[72px] ;
+}
+
+.underlined-primary::after {
+  content: "";
+  width: 47px;
+  height: 1px;
+  background: #E51E31;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.underlined-black::after{
+  content: "";
+  width: 200%;
+  height: 1px;
+  background: black;
+  position: absolute;
+  left: -50%;
+  bottom: -14px;
 }
 
