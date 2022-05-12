@@ -18,7 +18,7 @@ const DataEvent = ({ data, url, ...props }) => {
   return (
     <CustomLink url={url} newTab={false}>
       <div className="flex w-full relative flex-col md:flex-row items-center gap-y-[30px] md:gap-y-0 md:items-stretch  md:gap-x-[13px] mb-4 justify-between">
-        <div className="w-1/2 relative">
+        <div className="lg:w-1/2 lg:h-auto w-[209px] h-[139px] sm:w-[418px] sm:h-[278px] relative">
           <Image
             src={getStrapiMedia(data.image)}
             // width={199}
@@ -31,7 +31,7 @@ const DataEvent = ({ data, url, ...props }) => {
           />
         </div>
   
-        <div className="flex flex-col text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-[137px]">
+        <div className="flex flex-col grow text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-[137px] md:h-auto">
           <span className="max-3-lines">{data.title}</span>
           <span className="text-date detail">{date}</span>
         </div>
