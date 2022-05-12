@@ -34,7 +34,7 @@ const Footer = () => {
 
         <div className="flex flex-col  items-start lg:w-1/4">
           {titleSocialMedia ? (
-            <h5 className="text-white text-left lg:text-center min-h-[30px] w-full mb-4 font-bold">
+            <h5 className="text-white text-center lg:text-left min-h-[30px] w-full mb-4 font-bold">
               {titleSocialMedia}
             </h5>
           ) : (
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className=" p-5 w-full flex justify-evenly    flex-col lg:flex-row text-center">
           <div className=" flex justify-center lg:justify-start w-full lg:w-1/6   mb-8">
             <Image
-              className="w-[25px] h-[25px] "
+              className="w-[25px] h-[25px] z-0"
               src={getStrapiMedia(logoSite)}
               alt=""
               width={25}

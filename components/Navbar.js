@@ -2,10 +2,12 @@ import { getStrapiMedia } from "../lib/media"
 import { useContext } from "react"
 import { GlobalContext } from "../pages/_app"
 import ButtonLink from "./element/buttonLink"
-import { color } from "tailwindcss/lib/util/dataTypes"
+import Image from "next/image"
+import { useMemo } from "react"
 
 const Navbar = () => {
-  const { Navbar } = useContext(GlobalContext)
+  const Data = useContext(GlobalContext)
+  const Navbar = useMemo(() => Data.Navbar, [])
   const menu = Navbar.menus
   const btns = Navbar.Cta
 
@@ -27,10 +29,11 @@ const Navbar = () => {
         <div className="wrapper h-full">
           <div className="h-full flex items-center justify-between">
             <figure>
-              <img
+              <Image
                 src={getStrapiMedia(Navbar.logo)}
                 alt={Navbar.logo.data.attributes.alternativeText}
                 width={68}
+                height={68}
               />
             </figure>
 
@@ -47,21 +50,21 @@ const Navbar = () => {
                   x2="35"
                   y2="1.25"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
                 <line
                   y1="12.25"
                   x2="25"
                   y2="12.25"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
                 <line
                   y1="22.25"
                   x2="14"
                   y2="22.25"
                   stroke="black"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
               </svg>
             </button>
@@ -82,8 +85,8 @@ const Navbar = () => {
                   <path
                     d="M15.5728 1L1.91016 17M15.5728 17L1.91016 1L15.5728 17Z"
                     stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </button>
@@ -124,10 +127,11 @@ const Navbar = () => {
       >
         <div className="wrapper h-full flex items-center justify-between">
           <a href="/">
-            <img
+            <Image
               src={getStrapiMedia(Navbar.logo)}
               alt={Navbar.logo.data.attributes.alternativeText}
               width={68}
+              height={68}
             />
           </a>
 
@@ -164,9 +168,5 @@ const Navbar = () => {
     </header>
   )
 }
-/*
-Navbar.propTypes = {
-
-} */
 
 export default Navbar
