@@ -65,6 +65,7 @@ module.exports = {
       DosisRegular: ["DosisRegular", "sans-serif"],
       DosisBold: ["DosisBold", "sans-serif"],
       DosisSemiBold: ["DosisSemiBold", "sans-serif"],
+      DosisMedium: ["DosisMedium" ,"sans-serif"],
       KarlaBold: ["KarlaBold", "sans-serif"],
       KarlaSemiBold: ["KarlaSemiBold", "sans-serif"],
       KarlaRegular: ["KarlaRegular", "sans-serif"],
