@@ -16,7 +16,7 @@ const ButtonLink = ( { text, url, newTab="false", color="rouge" , type="full" ,f
     }
     return (
         <CustomLink url={url} newTab={newTab}>
-            <div className={`button ${buttonColor[form]} ${buttonColor[color]} ${buttonType[type]} ${className} `}>
+            <div className={`button ${buttonForm[form]} ${buttonColor[color]} ${buttonType[type]} ${className} `}>
                 {text}
             </div>
         </CustomLink>
