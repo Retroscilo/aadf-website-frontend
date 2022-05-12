@@ -90,6 +90,10 @@ p,ul,ol {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
+p{
+  @apply mb-[2rem];
+}
+
 a{
   @apply cursor-pointer;
 }
@@ -104,6 +108,9 @@ a:hover .arrow {
   @apply translate-x-[10px];
 }
 
+.arrowLink p{
+  @apply mb-[0px];
+}
 
 .buttonPrimary1 {
   @apply border-primary-1 
@@ -190,7 +197,7 @@ ul li {
   -webkit-box-orient: vertical;
 }
 
-section{
-  @apply my-[100px];
+section,.section{
+  @apply mt-[100px] mb-[137px] flex flex-col gap-y-[72px];
 }
 

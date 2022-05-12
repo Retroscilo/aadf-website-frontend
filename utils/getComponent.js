@@ -9,6 +9,7 @@ import Navbar from "../components/element/navbar/Navbar"
 import AdhesionSection from "../components/section/adhesionSection"
 import Actions from "../components/section/actions"
 import EspaceVeilles from "../components/section/espaceVeille"
+import PresentationSection from "../components/section/presentationSection"
 
 const Components = {
   section: {
@@ -19,6 +20,7 @@ const Components = {
     "adhesion-section": AdhesionSection,
     actions: Actions,
     "espace-veille": EspaceVeilles,
+    "presentation-section": PresentationSection
   },
   element: {
     "styled-image": StyledImage,
