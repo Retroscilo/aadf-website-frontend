@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className="h-[8.9rem] xl:hidden"
+        className="h-[8.9rem] xl:hidden bg-[#ffffff]"
         style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         <div className="wrapper h-full">
@@ -70,7 +70,7 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className="py-[3rem] fixed inset-[0] m-[0] bg-[#ffffff] hidden"
+            className="py-[3rem] fixed inset-[0] m-[0] hidden"
             id="menu-content"
           >
             <div className="wrapper">
@@ -122,7 +122,7 @@ const Navbar = () => {
 
       {/* Nav Desktop */}
       <nav
-        className="hidden xl:block h-[8.9rem]"
+        className="hidden xl:block h-[8.9rem] bg-[#ffffff]"
         style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         <div className="wrapper h-full flex items-center justify-between">
