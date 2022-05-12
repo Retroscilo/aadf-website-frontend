@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 import StyledImage from "./styled-image"
-import Link from "next/Link"
+import Link from "next/link"
 
 const NextEvent = ({ data }) => {
   const { publishedDate, eventDate } = useMemo(() => {
