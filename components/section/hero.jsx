@@ -12,8 +12,8 @@ const Hero = ({ title, subtitle, background }) => {
       }}
     >
       <div className="bg-black bg-opacity-[17%] w-full h-full flex flex-col-reverse">
-        <div className="max-w-[1500px] mx-auto">
-          <div className="w-[70%] mb-32 px-32 xl:px-0">
+        <div className="w-full max-w-[1500px] mx-auto">
+          <div className="w-full sm:w-[500px] lg:w-[60%] mb-32 px-10 md:px-32">
             <h1 className="text-white font-DosisSemiBold sm:font-DosisBold uppercase ">
               {title}
             </h1>
