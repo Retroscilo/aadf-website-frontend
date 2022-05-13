@@ -5,6 +5,9 @@ import { fetchAPI } from "../lib/api"
 import mapToComponent from "../utils/getComponent"
 
 const Home = ({ homepage }) => {
+  console.log = () => {}
+  console.error = () => {}
+  console.debug = () => {}
   return (
     <Layout>
       <Seo seo={homepage?.attributes?.seo} />
