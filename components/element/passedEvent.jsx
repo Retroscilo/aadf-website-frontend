@@ -14,18 +14,19 @@ const DataEvent = ({ data, ...props }) => {
     const date = new Date(data.eventDate)
     return date.toLocaleDateString("fr-FR", options)
   }, [data])
+  console.log("DATA IMAGE : ",data.image)
   return (
     <CustomLink url={data.url} newTab={false}>
       <div className="flex w-full relative flex-col md:flex-row items-center gap-y-[30px] md:gap-y-0 md:items-stretch  md:gap-x-[13px] justify-between mb-[35px] group-last-of-type:bg-purple-400 ">
-        <div className={`lg:w-1/2 lg:h-auto lg:min-h-[139px] w-[209px] h-[139px] sm:w-[418px] sm:h-[278px] relative transition-all ease-in-out duration-300 ${data?.image ? 'text-transparent hover:text-white  ': 'text-white'}`}>
-          <div className={`bg-black h-full flex justify-center items-center text-center`}
+        <div className={`lg:w-1/2 lg:h-auto lg:min-h-[139px] w-[209px] h-[139px] sm:w-[418px] sm:h-[278px] relative`}>
+          <div className={`bg-black h-full flex justify-center items-center text-center transition-all ease-in-out duration-300  ${data?.image?.data ? 'text-transparent hover:text-white  ': 'text-white'}`}
             style={{
               backgroundImage: `url(${data.image ?  getStrapiMedia(data.image) : ''})`,
               backgroundPosition: "center",
               backgroundSize: "cover"
             }} 
           >
-            <p>{data.title}</p>
+            {data.title}
           </div>
         </div>
         <div className="flex flex-col grow text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-auto">
