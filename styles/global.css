@@ -6,48 +6,49 @@
   font-family: "DosisRegular";
   src: url("/fonts/dosis/dosis-v26-latin-regular.woff") format("woff"),
     url("/fonts/dosis/dosis-v26-latin-regular.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "DosisBold";
   src: url("/fonts/dosis/dosis-v26-latin-700.woff") format("woff"),
     url("/fonts/dosis/dosis-v26-latin-700.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "DosisMedium";
   src: url("/fonts/dosis/dosis-v26-latin-500.woff") format("woff"),
     url("/fonts/dosis/dosis-v26-latin-500.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "DosisSemiBold";
   src: url("/fonts/dosis/dosis-v26-latin-600.woff") format("woff"),
     url("/fonts/dosis/dosis-v26-latin-600.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: 600;
 }
 
 @font-face {
   font-family: "KarlaRegular";
   src: url("/fonts/karla/karla-v22-latin-regular.woff") format("woff"),
     url("/fonts/karla/karla-v22-latin-regular.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "KarlaBold";
   src: url("/fonts/karla/karla-v22-latin-700.woff") format("woff"),
     url("/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "KarlaSemiBold";
   src: url("/fonts/karla/karla-v22-latin-600.woff") format("woff"),
     url("/fonts/karla/karla-v22-latin-600.woff2") format("woff2");
+  font-weight: 600;
 }
 @font-face {
   font-family: "KarlaMedium";
@@ -73,8 +74,12 @@ body {
   line-height: 150%;
 }
 
+h1,h2,h3,h4{
+  line-height: normal;
+}
+
 h1 {
-  @apply font-DosisBold text-[36px] lg:text-[48px] leading-[46px] lg:leading-[61px];
+  @apply font-DosisBold text-[36px] lg:text-[48px];
 }
 
 h2 {
@@ -82,7 +87,7 @@ h2 {
 }
 
 h3 {
-  @apply font-KarlaRegular lg:font-KarlaMedium text-[30px] lg:text-[30px] leading-[28px] lg:leading-[33px];
+  @apply font-KarlaRegular lg:font-KarlaMedium text-[30px] lg:text-[30px];
 }
 
 h4 {
@@ -91,14 +96,14 @@ h4 {
 
 b,
 strong {
-  @apply font-KarlaBold text-[24px] lg:text-[22px];
+  @apply font-KarlaBold text-[18px] lg:text-[22px];
 }
 
 .detail {
   @apply font-KarlaMedium text-[14px] lg:text-[18px];
 }
 
-p,ul,ol {
+p,ul,ol,div {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
 }
 
