@@ -246,3 +246,16 @@ section,.section{
   bottom: -14px;
 }
 
+.actionImage {
+  background-size: cover;
+  background-position: cover;
+  background-position: center;
+  cursor: pointer;
+  background-size: 100%;
+  transition: ease-in-out .3s;
+}
+
+.actionImage:hover {
+  background-size: 120%;
+}
+
