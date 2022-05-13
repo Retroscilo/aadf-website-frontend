@@ -33,7 +33,7 @@ const MarkdownToJsx = ({ children }) => {
             },
             center: {
               component: ({ children }) => (
-                <span className="text-center">{children}</span>
+                <span className="flex text-center">{children}</span>
               ),
             },
           },
