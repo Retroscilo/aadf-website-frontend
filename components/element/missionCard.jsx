@@ -2,7 +2,7 @@ import CustomImage from "./customImage"
 
 const MissionCard = ({ missionTitle, image, description }) => {
   return (
-    <div className="grid-rows-[auto_auto_1fr] xl:w-[50%] lg:pl-12  w-[100%] inline-grid gap-12 my-20 lg:px-20">
+    <div className="grid-rows-[auto_auto_1fr] xl:w-[50%] lg:pl-30  w-[100%] inline-grid gap-12 my-20 lg:px-20">
       <h2 className="text-center lg:text-left lg:row-start-2">
         {missionTitle}
       </h2>
