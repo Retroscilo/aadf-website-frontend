@@ -16,6 +16,8 @@ import Actions from "../components/section/actions"
 import EspaceVeilles from "../components/section/espaceVeille"
 import PresentationSection from "../components/section/presentationSection"
 import ActionCard from "../components/element/actionCard"
+import JobTitles from "../components/section/JobTitles"
+import MemberSection from "../components/section/MemberSection"
 
 const Components = {
   section: {
@@ -31,8 +33,12 @@ const Components = {
     actions: Actions,
     "espace-veille": EspaceVeilles,
     "presentation-section": PresentationSection,
+    "underlined-text-section": JobTitles,
+    "job-titles": JobTitles,
+    "member-section": MemberSection,
   },
   element: {
+    "grid-content": GridContent,
     "action-card": ActionCard,
     "styled-image": StyledImage,
     "grid-content": GridContent,

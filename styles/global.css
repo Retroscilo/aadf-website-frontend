@@ -259,3 +259,21 @@ section,.section{
   background-size: 120%;
 }
 
+.underlinedText {
+  position: relative;
+}
+.underlinedText::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: crimson;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.textSectionRed {
+  color: white !important;
+}
+
