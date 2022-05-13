@@ -14,22 +14,22 @@ const DataEvent = ({ data, ...props }) => {
     const date = new Date(data.eventDate)
     return date.toLocaleDateString("fr-FR", options)
   }, [data])
-
   return (
     <CustomLink url={data.url} newTab={false}>
       <div className="flex w-full relative flex-col md:flex-row items-center gap-y-[30px] md:gap-y-0 md:items-stretch  md:gap-x-[13px] justify-between mb-[35px] group-last-of-type:bg-purple-400 ">
-        <div className="lg:w-1/2 lg:h-auto lg:min-h-[139px] w-[209px] h-[139px] sm:w-[418px] sm:h-[278px] relative">
-          <Image
-            src={getStrapiMedia(data.image)}
-            layout="fill"
-            alt={data.image.data.attributes.alternativeText}
-            placeholder="blur"
-            blurDataURL={getStrapiMedia(data.image)}
-            className="w-[199px] h-[127px] object-cover object-left-top flex-none"
-          />
+        <div className={`lg:w-1/2 lg:h-auto lg:min-h-[139px] w-[209px] h-[139px] sm:w-[418px] sm:h-[278px] relative transition-all ease-in-out duration-300 ${data?.image ? 'text-transparent hover:text-white  ': 'text-white'}`}>
+          <div className={`bg-black h-full flex justify-center items-center text-center`}
+            style={{
+              backgroundImage: `url(${data.image ?  getStrapiMedia(data.image) : ''})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover"
+            }} 
+          >
+            <p>{data.title}</p>
+          </div>
         </div>
         <div className="flex flex-col grow text-center gap-y-[30px] md:gap-y-0 md:text-left md:justify-between w-[290px] h-auto">
-          <span className="max-3-lines">{data.title}</span>
+          <span className="max-3-lines">{data.description}</span>
           <span className="text-date detail">{date}</span>
         </div>
       </div>
