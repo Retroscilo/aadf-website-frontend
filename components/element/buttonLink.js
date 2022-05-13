@@ -12,6 +12,7 @@ const ButtonLink = ({
   const buttonColor = {
     rouge: "buttonPrimary1",
     jaune: "buttonSecondary2",
+    blanc: "white",
   }
   const buttonType = {
     full: "buttonFull",
