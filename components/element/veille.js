@@ -9,7 +9,7 @@ const Veille = ({ title, image, date, url, newTab }) => {
   }
   const dateParsed = new Date(date).toLocaleDateString("fr-FR", options)
   return (
-    <div className="flex-none first-of-type:ml-[2rem] lg:first-of-type:ml-[100px] w-[287px] lg:w-[400px] h-[400px] flex flex-col bg-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+    <div className="flex-none scale-100 hover:scale-105 transition-all ease-in-out first-of-type:ml-[2rem] lg:first-of-type:ml-[100px] w-[287px] lg:w-[400px] h-[400px] flex flex-col bg-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
       <CustomLink url={url} newTab={newTab}>
         <div
           className="h-[236px] w-full"
