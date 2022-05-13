@@ -5,7 +5,6 @@ import { fetchAPI } from "../lib/api"
 import mapToComponent from "../utils/getComponent"
 
 const Legals = ({ pageData }) => {
-  console.log(pageData)
   return (
     <Layout>
       <Seo seo={pageData?.attributes?.seo} />

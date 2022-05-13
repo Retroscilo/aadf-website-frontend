@@ -48,7 +48,6 @@ const Components = {
 }
 
 function getComponent(component) {
-  console.log({ component })
   const [type, name] = component.split(".")
 
   return Components[type]?.[name] || Components.notFound

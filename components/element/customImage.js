@@ -1,7 +1,6 @@
 import Image from "../image"
 
 const CustomImage = ({ image, color, className, ...props }) => {
-  console.log(image)
   const bgColor = {
     rouge: "shadow-primary-1",
     noir: "shadow-primary-2",
