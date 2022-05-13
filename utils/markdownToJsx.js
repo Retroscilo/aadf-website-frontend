@@ -31,6 +31,11 @@ const MarkdownToJsx = ({ children }) => {
                 <span className=" text-date ">{children}</span>
               ),
             },
+            center: {
+              component: ({ children }) => (
+                <span className="text-center">{children}</span>
+              ),
+            },
           },
         }}
       >
