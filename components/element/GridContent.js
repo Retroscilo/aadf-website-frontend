@@ -7,10 +7,22 @@ const GridContent = ({
   image2,
   image3,
   image4,
+  props,
 }) => {
-  console.log(title1)
+  console.log(image4)
 
-  return <div className="grid"></div>
+  return (
+    <div className="wrapper">
+      <ul className="grid">
+        <li>
+          <span>{title1}</span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+      </ul>
+    </div>
+  )
 }
 
 export default GridContent
