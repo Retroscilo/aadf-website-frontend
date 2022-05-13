@@ -188,7 +188,8 @@ a:hover .arrow {
 
 .wrapper {
   max-width: 128rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 2rem;
 }
 
