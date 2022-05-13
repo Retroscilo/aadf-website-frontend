@@ -1,5 +1,6 @@
 import ArrowLink from "../element/arrowLink"
 import Veille from "../element/veille"
+import { v4 as uuidv4 } from "uuid"
 
 const EspaceVeilles = ({ title, arrowLink, veilles }) => {
   return (
@@ -11,7 +12,7 @@ const EspaceVeilles = ({ title, arrowLink, veilles }) => {
             return new Date(b.attributes.date) - new Date(a.attributes.date)
           else a
         }).map((veille) => (
-          <Veille {...veille.attributes} />
+          <Veille key={uuidv4()} {...veille.attributes} />
         ))}
       </div>
       <div className="inline-block m-auto">

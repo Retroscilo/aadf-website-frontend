@@ -21,7 +21,7 @@ const MarkdownToJsx = ({ children }) => {
                 <span className=" text-secondary-1 ">{children}</span>
               ),
             },
-            jaune: {
+            orange: {
               component: ({ children }) => (
                 <span className=" text-secondary-2 ">{children}</span>
               ),
@@ -29,6 +29,11 @@ const MarkdownToJsx = ({ children }) => {
             gris: {
               component: ({ children }) => (
                 <span className=" text-date ">{children}</span>
+              ),
+            },
+            center: {
+              component: ({ children }) => (
+                <span className="flex text-center">{children}</span>
               ),
             },
           },

@@ -1,6 +1,8 @@
 import MarkdownToJsx from "../../utils/markdownToJsx"
 import ButtonLink from "../element/buttonLink"
 import CustomImage from "../element/customImage"
+import { v4 as uuidv4 } from "uuid"
+
 
 const AdhesionSection = ({
   title,
@@ -23,7 +25,7 @@ const AdhesionSection = ({
         </article>
         <article className="w-full sm:w-1/4 flex flex-col gap-y-[5rem]">
           {images?.map((image) => (
-            <CustomImage {...image} />
+            <CustomImage key={uuidv4()} {...image} />
           ))}
         </article>
         {buttonLink && (

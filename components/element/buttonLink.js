@@ -12,7 +12,7 @@ const ButtonLink = ({
   const buttonColor = {
     rouge: "buttonPrimary1",
     jaune: "buttonSecondary2",
-    blanc: "white",
+    orange: "buttonSecondary2",
   }
   const buttonType = {
     full: "buttonFull",
@@ -26,7 +26,7 @@ const ButtonLink = ({
   return (
     <CustomLink url={url} newTab={newTab}>
       <div
-        className={`button ${buttonForm[form]} ${buttonColor[color]} ${buttonType[type]} ${className} `}
+        className={`button ${buttonForm[form]} ${buttonColor[color]} ${buttonType[type]} ${className}`}
       >
         {text}
       </div>
