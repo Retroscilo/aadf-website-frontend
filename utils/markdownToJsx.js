@@ -21,7 +21,7 @@ const MarkdownToJsx = ({ children }) => {
                 <span className=" text-secondary-1 ">{children}</span>
               ),
             },
-            jaune: {
+            orange: {
               component: ({ children }) => (
                 <span className=" text-secondary-2 ">{children}</span>
               ),
