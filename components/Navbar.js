@@ -4,8 +4,13 @@ import { GlobalContext } from "../pages/_app"
 import ButtonLink from "./element/buttonLink"
 import Image from "next/image"
 import { useMemo } from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
 
 const Navbar = () => {
+  const router = useRouter()
+  console.log(router.asPath)
+
   const Data = useContext(GlobalContext)
   const Navbar = useMemo(() => Data.Navbar, [])
   const menu = Navbar.menus
@@ -28,16 +33,22 @@ const Navbar = () => {
       >
         <div className="wrapper h-full">
           <div className="h-full flex items-center justify-between">
-            <figure>
-              <Image
-                src={getStrapiMedia(Navbar.logo)}
-                alt={Navbar.logo.data.attributes.alternativeText}
-                width={68}
-                height={68}
-              />
-            </figure>
-
-            <button type="button" className="py-4" onClick={openMenu}>
+            <Link href="/">
+              <a>
+                <Image
+                  src={getStrapiMedia(Navbar.logo)}
+                  alt={Navbar.logo.data.attributes.alternativeText}
+                  width={68}
+                  height={68}
+                />
+              </a>
+            </Link>
+            <button
+              type="button"
+              ria-label="Open"
+              className="py-4"
+              onClick={openMenu}
+            >
               <svg
                 width="35"
                 height="23"
@@ -70,11 +81,11 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className="py-[3rem] fixed inset-[0] m-[0] hidden"
+            className="py-[3rem] fixed inset-[0] m-[0] hidden z-[99999] bg-default"
             id="menu-content"
           >
             <div className="wrapper">
-              <button type="button" onClick={closeMenu}>
+              <button type="button" onClick={closeMenu} aria-label="Close">
                 <svg
                   width="17"
                   height="18"
@@ -91,27 +102,22 @@ const Navbar = () => {
                 </svg>
               </button>
               <ul>
-                {menu.data?.map((item, key) => (
+                {menu?.data?.map((item, key) => (
                   <li key={key} className="mt-[3.2rem] ml-[.5rem] font-medium">
-                    <a
+                    <Link
                       href={item.attributes.url}
                       target={item.attributes.newTab ? "_blank" : "_self"}
                       rel={item.attributes.newTab ? "noreferrer" : ""}
                     >
                       {item.attributes.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
               <ul>
                 {btns.map((item, key) => (
                   <li key={key} className="mt-[3.2rem] ml-[.5rem]">
-                    <ButtonLink
-                      text={item.text}
-                      type={item.type}
-                      url={item.url}
-                      newTab={item.newTab}
-                    />
+                    <ButtonLink {...item} />
                   </li>
                 ))}
               </ul>
@@ -126,26 +132,35 @@ const Navbar = () => {
         style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         <div className="wrapper h-full flex items-center justify-between">
-          <a href="/">
-            <Image
-              src={getStrapiMedia(Navbar.logo)}
-              alt={Navbar.logo.data.attributes.alternativeText}
-              width={68}
-              height={68}
-            />
-          </a>
+          <Link href="/">
+            <a>
+              <Image
+                src={getStrapiMedia(Navbar.logo)}
+                alt={Navbar.logo.data.attributes.alternativeText}
+                width={68}
+                height={68}
+              />
+            </a>
+          </Link>
 
           <div className="flex gap-x-[6rem]">
             <ul className="flex items-center gap-x-[4rem] hove">
-              {menu.data?.map((item, key) => (
-                <li key={key} className="font-medium hover:decoration-2">
-                  <a
+              {menu?.data?.map((item, key) => (
+                <li
+                  key={key}
+                  className={`relative cursor-pointer font-medium hover:decoration-2 after:block after:absolute after:w-[0] after:h-[.2rem] after:border-primary-2 after:border-b-[.15rem] hover:after:w-full after:transition-all after:delay-150 after:duration-200 ${
+                    router.asPath === item.attributes.url
+                      ? "!after:w-full"
+                      : false
+                  }`}
+                >
+                  <Link
                     href={item.attributes.url}
                     target={item.attributes.newTab ? "_blank" : "_self"}
                     rel={item.attributes.newTab ? "noreferrer" : ""}
                   >
                     {item.attributes.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -153,12 +168,7 @@ const Navbar = () => {
             <ul className="flex gap-x-[3rem]">
               {btns.map((item, key) => (
                 <li key={key}>
-                  <ButtonLink
-                    text={item.text}
-                    type={item.type}
-                    url={item.url}
-                    newTab={item.newTab}
-                  />
+                  <ButtonLink {...item} />
                 </li>
               ))}
             </ul>
