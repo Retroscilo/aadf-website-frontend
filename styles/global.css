@@ -212,7 +212,6 @@ a:hover .arrow {
 
 .markdown ul li {
   @apply my-[2.5rem];
-  list-style: none;
 }
 
 .max-3-lines {
