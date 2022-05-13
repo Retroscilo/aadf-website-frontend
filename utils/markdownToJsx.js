@@ -11,6 +11,26 @@ const MarkdownToJsx = ({ children }) => {
                 <span className=" text-primary-1 ">{children}</span>
               ),
             },
+            noir: {
+              component: ({ children }) => (
+                <span className=" text-primary-2 ">{children}</span>
+              ),
+            },
+            bleu: {
+              component: ({ children }) => (
+                <span className=" text-secondary-1 ">{children}</span>
+              ),
+            },
+            jaune: {
+              component: ({ children }) => (
+                <span className=" text-secondary-2 ">{children}</span>
+              ),
+            },
+            gris: {
+              component: ({ children }) => (
+                <span className=" text-date ">{children}</span>
+              ),
+            },
           },
         }}
       >

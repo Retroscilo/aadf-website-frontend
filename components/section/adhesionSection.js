@@ -10,8 +10,8 @@ const AdhesionSection = ({
   ...props
 }) => {
   return (
-    <div className="container wrapper">
-      <h1 className="text-center mb-[73px]">{title}</h1>
+    <section className="container">
+      <h1 className="text-center">{title}</h1>
       <div className="flex flex-col gap-y-[5.5rem] sm:flex-row sm:justify-between">
         <article className="sm:w-1/2">
           <MarkdownToJsx>{description}</MarkdownToJsx>
@@ -32,7 +32,7 @@ const AdhesionSection = ({
           </div>
         )}
       </div>
-    </div>
+    </section>
   )
 }
 export default AdhesionSection
