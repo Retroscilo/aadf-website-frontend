@@ -15,6 +15,7 @@ import AdhesionSection from "../components/section/adhesionSection"
 import Actions from "../components/section/actions"
 import EspaceVeilles from "../components/section/espaceVeille"
 import PresentationSection from "../components/section/presentationSection"
+import ActionCard from "../components/element/actionCard"
 
 const Components = {
   section: {
@@ -32,6 +33,7 @@ const Components = {
     "presentation-section": PresentationSection,
   },
   element: {
+    "action-card": ActionCard,
     "styled-image": StyledImage,
     "grid-content": GridContent,
     "mission-card": MissionCard,
