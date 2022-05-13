@@ -16,6 +16,7 @@ const Image = ({ image, style }) => {
       height={height || "100%"}
       objectFit="contain"
       src={getStrapiMedia(image)}
+      blurDataURL={getStrapiMedia(image)}
       alt={alternativeText || ""}
     />
   )
