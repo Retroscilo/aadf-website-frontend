@@ -65,8 +65,8 @@ const Footer = () => {
 
       <div>
         <hr className="bg-white px-5 mt-16  mb-5" />
-        <div className=" p-5 w-full flex justify-evenly    flex-col lg:flex-row text-center whitespace-nowrap">
-          <div className=" flex lg:justify-start w-full lg:w-1/6 mb-8">
+        <div className=" p-5 w-full flex justify-evenly    flex-col lg:flex-row text-center">
+          <div className=" flex justify-center sm:justify-start w-full lg:w-1/6 mb-8">
             <Image
               className="w-[25px] h-[25px] z-0"
               src={getStrapiMedia(logoSite)}
