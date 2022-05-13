@@ -25,8 +25,17 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <GlobalContext.Provider value={global?.attributes}>
         <Component {...pageProps} />
-        <CookieConsent>
-          This website uses cookies to enhance the user experience.
+        <CookieConsent
+          buttonText="J'ai compris"
+          buttonStyle={{
+            color: "white",
+            fontSize: "13px",
+            backgroundColor: "rgb(229 30 49 / var(--tw-bg-opacity))",
+          }}
+        >
+          En poursuivant votre navigation sur ce site, vous acceptez
+          l’utilisation de cookies afin d'améliorer continuellement votre
+          expérience.
         </CookieConsent>
       </GlobalContext.Provider>
     </>
