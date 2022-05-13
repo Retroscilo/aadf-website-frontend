@@ -34,7 +34,7 @@ const Footer = () => {
 
         <div className="flex flex-col  items-start lg:w-1/4">
           {titleSocialMedia ? (
-            <h5 className="text-white text-left lg:text-center min-h-[30px] w-full mb-4 font-bold">
+            <h5 className="text-white text-center lg:text-left min-h-[30px] w-full mb-4 font-bold">
               {titleSocialMedia}
             </h5>
           ) : (
@@ -44,10 +44,13 @@ const Footer = () => {
           <ul
             className={` inline-block  ${
               titleSocialMedia ? " mt-[0px] " : "mt-2"
-            } w-full flex  justify-center`}
+            } w-full flex`}
           >
             {SocialMedia?.map((item) => (
-              <li key={v4()} className="inline-block    mx-[8px]">
+              <li
+                key={v4()}
+                className="inline-block  md:justify-start justify-center  mr-[8px]"
+              >
                 <a href={item.url}>
                   <Image
                     src={getStrapiMedia(item.logo)}
@@ -66,9 +69,9 @@ const Footer = () => {
       <div>
         <hr className="bg-white px-5 mt-16  mb-5" />
         <div className=" p-5 w-full flex justify-evenly    flex-col lg:flex-row text-center">
-          <div className=" flex justify-center lg:justify-start w-full lg:w-1/6   mb-8">
+          <div className=" flex lg:justify-start w-full lg:w-1/6 mb-8">
             <Image
-              className="w-[25px] h-[25px] "
+              className="w-[25px] h-[25px] z-0"
               src={getStrapiMedia(logoSite)}
               alt=""
               width={25}

@@ -1,0 +1,22 @@
+.form {
+	align-items: flex-start;
+	display: flex;
+	justify-content: center;
+	font-family: "Karla Medium";
+	font-weight: 500;
+	color: black;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 30px;
+	flex-direction: column;
+}
+
+.form .form-input {
+	box-sizing: border-box;
+	margin-top: 15px;
+	height: 56px;
+	width: 406px;
+	padding: 0px 24px;
+	border-radius: 10px;
+	border: .5px solid black;
+}

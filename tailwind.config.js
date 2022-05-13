@@ -2,11 +2,15 @@ const { colors } = require(`tailwindcss/defaultTheme`)
 
 module.exports = {
   mode: "jit", // see https://tailwindcss.com/docs/just-in-time-mode
-  purge: ["./components/**/*.{js,jsx}", "./pages/**/*.js"],
+  purge: [
+    "./components/**/*.{js,jsx}",
+    "./pages/**/*.{js,jsx}",
+    "./utils/**/*.{js,jsx}",
+  ],
   darkMode: false, // or "media" or "class"
   theme: {
     spacing: {
-      0: "20px",
+      0: "0",
       1: "100px",
       2: "0.5rem",
       2.5: "0.625rem",
@@ -57,6 +61,8 @@ module.exports = {
         center: true,
         padding: {
           DEFAULT: "2rem",
+          // sm:"0px"
+          // sm: "0 100px",
         },
       },
     },
@@ -64,6 +70,7 @@ module.exports = {
       DosisRegular: ["DosisRegular", "sans-serif"],
       DosisBold: ["DosisBold", "sans-serif"],
       DosisSemiBold: ["DosisSemiBold", "sans-serif"],
+      DosisMedium: ["DosisMedium", "sans-serif"],
       KarlaBold: ["KarlaBold", "sans-serif"],
       KarlaSemiBold: ["KarlaSemiBold", "sans-serif"],
       KarlaRegular: ["KarlaRegular", "sans-serif"],

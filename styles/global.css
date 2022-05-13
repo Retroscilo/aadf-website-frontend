@@ -4,61 +4,78 @@
 
 @font-face {
   font-family: "DosisRegular";
-  src: url("//public/fonts/dosis/dosis-v26-latin-regular.woff") format("woff"),
-    url("//public/fonts/dosis/dosis-v26-latin-regular.woff2") format("woff2");
-  font-weight: normal;
+  src: url("/fonts/dosis/dosis-v26-latin-regular.woff") format("woff"),
+    url("/fonts/dosis/dosis-v26-latin-regular.woff2") format("woff2");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "DosisBold";
-  src: url("/public/fonts/dosis/dosis-v26-latin-700.woff") format("woff"),
-    url("/public/fonts/dosis/dosis-v26-latin-700.woff2") format("woff2");
-  font-weight: bold;
+  src: url("/fonts/dosis/dosis-v26-latin-700.woff") format("woff"),
+    url("/fonts/dosis/dosis-v26-latin-700.woff2") format("woff2");
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "DosisMedium";
-  src: url("/public/fonts/dosis/dosis-v26-latin-500.woff") format("woff"),
-    url("/public/fonts/dosis/dosis-v26-latin-500.woff2") format("woff2");
-  font-weight: bold;
+  src: url("/fonts/dosis/dosis-v26-latin-500.woff") format("woff"),
+    url("/fonts/dosis/dosis-v26-latin-500.woff2") format("woff2");
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "DosisSemiBold";
-  src: url("/public/fonts/dosis/dosis-v26-latin-600.woff") format("woff"),
-    url("/public/fonts/dosis/dosis-v26-latin-600.woff2") format("woff2");
-  font-weight: bold;
+  src: url("/fonts/dosis/dosis-v26-latin-600.woff") format("woff"),
+    url("/fonts/dosis/dosis-v26-latin-600.woff2") format("woff2");
+  font-weight: 600;
 }
 
 @font-face {
   font-family: "KarlaRegular";
-  src: url("/public/fonts/karla/karla-v22-latin-700.woff") format("woff"),
-    url("/public/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
-  font-weight: bold;
+  src: url("/fonts/karla/karla-v22-latin-regular.woff") format("woff"),
+    url("/fonts/karla/karla-v22-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "KarlaBold";
+  src: url("/fonts/karla/karla-v22-latin-700.woff") format("woff"),
+    url("/fonts/karla/karla-v22-latin-700.woff2") format("woff2");
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "KarlaSemiBold";
-  src: url("/public/fonts/karla/karla-v22-latin-600.woff") format("woff"),
-    url("/public/fonts/karla/karla-v22-latin-600.woff2") format("woff2");
+  src: url("/fonts/karla/karla-v22-latin-600.woff") format("woff"),
+    url("/fonts/karla/karla-v22-latin-600.woff2") format("woff2");
+  font-weight: 600;
 }
 @font-face {
   font-family: "KarlaMedium";
-  src: url("/public/fonts/karla/karla-v22-latin-500.woff") format("woff"),
-    url("/public/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
+  src: url("/fonts/karla/karla-v22-latin-500.woff") format("woff"),
+    url("/fonts/karla/karla-v22-latin-500.woff2") format("woff2");
+  font-size: 500;
 }
 
-html {
-  @apply text-primary-2 font-KarlaMedium lg:text-[20px] bg-default;
+html,body {
+  @apply text-primary-2 font-KarlaMedium text-[18px] lg:text-[20px] bg-default;
+}
+
+html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 * {
   line-height: 150%;
+}
+
+h1,h2,h3,h4{
+  line-height: normal;
 }
 
 h1 {
@@ -79,15 +96,19 @@ h4 {
 
 b,
 strong {
-  @apply font-DosisSemiBold text-[24px] lg:text-[22px];
+  @apply font-KarlaBold text-[18px] lg:text-[22px];
 }
 
 .detail {
   @apply font-KarlaMedium text-[14px] lg:text-[18px];
 }
 
-p {
+p,ul,ol,div {
   @apply font-KarlaMedium text-[18px] lg:text-[20px];
+}
+
+.markdown p{
+  @apply mb-[2rem];
 }
 
 a{
@@ -104,14 +125,26 @@ a:hover .arrow {
   @apply translate-x-[10px];
 }
 
+.arrowLink p{
+  @apply mb-[0px];
+}
+
 .buttonPrimary1 {
   @apply border-primary-1 
   text-white 
   bg-primary-1;
 }
 
+.button {
+  @apply text-[18px] text-center border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out
+}
+
 .buttonRounded {
-  @apply rounded-full border-[2px] inline-block px-[32px] py-[7px] transition duration-300 ease-in-out;
+  @apply rounded-full;
+}
+
+.buttonSquared{
+  @apply rounded-none;
 }
 
 .buttonSecondary2 {
@@ -158,3 +191,72 @@ a:hover .arrow {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+.paddingCustomImage{
+  width: calc(100% - 10px);
+}
+
+
+.markdown ol,
+.markdown ul {
+  @apply mt-[20px] pl-[20px] lg:pl-[30px];
+}
+
+.markdown ul {
+  list-style-type: disc;
+}
+
+.markdown ol {
+  list-style-type: decimal;
+}
+
+.markdown ul li {
+  @apply my-[2.5rem];
+  list-style: none;
+}
+
+.max-3-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+section,.section{
+  @apply mt-[60px] md:mt-[100px] md:mb-[37px] mb-[35px] flex flex-col gap-y-[35px] md:gap-y-[72px] ;
+}
+
+.underlined-primary::after {
+  content: "";
+  width: 47px;
+  height: 1px;
+  background: #E51E31;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.underlined-black::after{
+  content: "";
+  width: 200%;
+  height: 1px;
+  background: black;
+  position: absolute;
+  left: -50%;
+  bottom: -14px;
+}
+
+.actionImage {
+  background-size: cover;
+  background-position: cover;
+  background-position: center;
+  cursor: pointer;
+  background-size: 100%;
+  transition: ease-in-out .3s;
+}
+
+.actionImage:hover {
+  background-size: 120%;
+}
+

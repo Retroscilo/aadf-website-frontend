@@ -1,0 +1,46 @@
+.form-choices {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.form-choices span {
+	font-weight: 700;
+	margin-bottom: 30px;
+	font-family: "Karla Regular";
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.form-choices .form-input {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	width: 65%;
+}
+
+.form-choices .form-input input {
+	margin-right: 17px;
+}
+
+.form-list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: left;
+	margin: 18px 0px;
+}
+
+.form-input label {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+.form-list .input-form {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}

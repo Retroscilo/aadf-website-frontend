@@ -5,15 +5,16 @@ import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
 import { getStrapiMedia } from "../lib/media"
 import "../styles/global.css"
-import { useEffect } from "react"
+import { useEffect, useMemo } from "react"
 import CookieConsent from "react-cookie-consent"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
-  const { global } = pageProps
-  console.log(global)
+  const data = pageProps
+  const global = useMemo(() => data.global, [])
+
   return (
     <>
       <Head>

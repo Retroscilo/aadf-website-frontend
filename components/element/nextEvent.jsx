@@ -1,6 +1,8 @@
 import { useMemo } from "react"
 import StyledImage from "./styled-image"
 import Link from "next/link"
+import CustomImage from "./customImage"
+import ButtonLink from "./buttonLink"
 
 const NextEvent = ({ data }) => {
   const { publishedDate, eventDate } = useMemo(() => {
@@ -23,18 +25,20 @@ const NextEvent = ({ data }) => {
     }
   }, [data])
   return (
-    <Link href="/evenements">
-      <>
-        <StyledImage
-          data={data.image}
-          width={600}
-          height={350}
-          className="mb-8 w-[400px] h-[225px] md:w-[600px] md:h-[350px]"
+    <>
+      <CustomImage image={data.image} />
+      <h4 className="mt-[44px]">{`${data.title} : le ${eventDate}`}</h4>
+      <p className="text-date detail mt-[10px] mb-[20px]">{publishedDate}</p>
+      <div className="flex justify-center lg:justify-start cursor-pointer">
+        <ButtonLink
+          text={"S'inscrire à l'évènement"}
+          url={data.url}
+          type={"outlined"}
+          form={"squared"}
+          newTab={false}
         />
-        <h4>{`${data.title} : le ${eventDate}`}</h4>
-        <p className="text-date detail">{publishedDate}</p>
-      </>
-    </Link>
+      </div>
+    </>
   )
 }
 

@@ -1,0 +1,48 @@
+.title-underline {
+	font-family: "Karla Medium";
+	color: black;
+	font-style: normal;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 33px;
+	position: relative;
+	display: inline;
+}
+
+.title-underline::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 47px;
+	bottom: -9px;
+	border: solid 1px #E51E31;
+	background-color: black;
+	transition: transform 0.3s ease-in-out;
+	margin: 2px;
+}
+
+.title-center {
+	font-family: "Karla Medium";
+	color: black;
+	font-style: normal;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 33px;
+	position: relative;
+	display: inline;
+}
+
+.title-center::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 47px;
+	bottom: -9px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: solid 1px #E51E31;
+	background-color: black;
+	transition: transform 0.3s ease-in-out;
+	margin: 2px;
+	text-align: center;
+}

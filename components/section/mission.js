@@ -1,20 +1,22 @@
 import OneMission from "../element/mission"
 
+const MissionWithDivider = ({mission,isLast}) => (
+    <>
+        <OneMission {...mission} isLast={isLast} />
+        <div className="hidden last-of-type:hidden lg:w-[1px] lg:h-[139px] lg:inline-block mt-auto justify-self-end lg:bg-primary-1" />
+    </>
+)
+
 const Mission = ({ title, missions }) => {
-    console.log("section : ", missions)
     return (
-        <div>
-            <h2 className="text-center">{title}</h2>
-            {
-                missions?.map((mission) => {
-                    return (
-                        <div key={mission.id}>
-                            <OneMission {...mission}/>
-                        </div>
-                    )
-                })
-            }
-        </div>
+        <section className="container">
+            <h2 className="text-left lg:text-center">{title}</h2>
+            <div className="flex flex-col lg:justify-between lg:flex-row gap-y-10 flex-wrap">
+                {
+                    missions?.map((mission,index) => <MissionWithDivider key={mission.id} isLast={index === missions.length - 1} mission={mission} />)
+                } 
+            </div>
+        </section>
     )
 }
 
