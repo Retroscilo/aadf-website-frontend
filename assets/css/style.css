@@ -97,7 +97,7 @@ img:hover {
   .pricingCard h4:first-child:after {
     left: 34px;
     transform: none;
-    bottom: 60px;
+    bottom: 0px;
   }
 }
 .underlined-black::after{
